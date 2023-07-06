@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Page</title>
+</head>
+<body>
+    <h3>오디오 자동 재생</h3>
+    <audio src="./resource/eagle.mp3" controls loop autoplay></audio>
+    <h3>오디오 수동 재생</h3>
+    <audio src="./resource/bear.mp3" controls></audio>
+    <h3>오디오 다중 재생</h3>
+    <audio controls>
+        <source src="./resource/chicken.mp3" type="audio/mpeg">
+        <!-- 익스플로워, 크롬, 모질라, 사파이, 파이어폭스 -->
+        <source src="./resource/chicken.ogg" type="audio/ogg">
+        <!-- 크롬, 파이어폭스 -->
+        <source src="./resource/chicken.wav" type="audio/wav">
+        <!-- 크롬 파이어폭스 -->
+    </audio>
+</body>
+</html>
+
+<!-- controls : 재생 버튼 생성 표시
+loop: 무한 반복
+autoplay: 자동 재생
+muted : 음소거
+preload : 오디오 파일 재생 여부와 상관없이 미리 다운로드 함 -->
+
+
+
