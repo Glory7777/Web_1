@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>embed/object 태그</title>
+</head>
+    <body>
+        <h1>embed 태그</h1>
+        <h3>이미지 파일 삽입</h3>
+        <embed src="./resource/html.bmp" width="150" height="170"/>
+        <!-- <h3>플래시 파일 삽입</h3>
+        <embed src="./resource/object.swf" /> -->
+        <h3>웹 문서 삽입</h3>
+        <embed src="http://soldesk.com" width="500" height="250"/>
+<!-- 소스데이터 가져와서 정적타입 활용 -->
+        <h1>Object 태그</h1>
+        <h3>이미지 파일 삽입</h3>
+        <object data="./resource/html.bmp" ></object>
+        <!-- <h3>플래시 파일 삽입</h3>
+        <object data="./resource/object.swf" type="application/x-shockwave-flash" width="500" height="250"></object> -->
+        <h3>PDF 파일 삽입</h3>
+        <object data="./resource/go2web.pdf" type="application/pdf"></object>
+        <!-- 서버와 생존주기를 같이 하기에 application 을 사용한다 -->
+    </body>
+</html>
+
+<!-- 플래시를 타고 바이러스 및 해킹을 많이 당하기에 최근엔 쓰지 않는 추세 -->

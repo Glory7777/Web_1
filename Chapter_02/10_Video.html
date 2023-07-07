@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <h3>비디오 자동 재생</h3>
+    <video 
+        src="./resource/small.webm"
+        controls
+        loop
+        autoplay
+        width="300"
+        height="250"
+        ></video>
+    <h3>비디오 수동 재생</h3>
+    <video src="./resource/bear.mp4" controls width="300" height="250"></video>
+    <h3>비디오 다중 재생 - 비디오 파일이 저장되어 로드해서 설정하는 경우</h3>
+    <video controls autoplay width="300" height="250">
+        <source src="./resource/small.mp4" type="video/mpeg">
+        <source src="./resource/movie.ogv" type="video/ogg">
+        <source src="./resource/small.webm" type="video/webm">
+    </video>
+    <h3>비디오 다중 재생 - 비디오 파일이 웹사이트에 있는 경우</h3>
+    <video 
+        controls 
+        autoplay="autoplay" 
+        poster="./resource/wait.jpg" 
+        width="300" 
+        height="250"
+    >
+        <!-- <source 
+            src="https://media.w3.org/2010/05/sintel/trailer.mp4" 
+            type='video/mp4; codecs="avc2, mp4"'
+            /> -->
+        <source
+             src="https://media.w3.org/2010/05/sintel/trailer.ogv" 
+             type='video/ogg; codecs="theora, vorbis"'
+             />
+        </video>
+    </body>
+</html>

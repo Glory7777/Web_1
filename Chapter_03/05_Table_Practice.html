@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 테이블 이용</title>
+</head>
+
+<body>
+    <h1>발리 여행 계획</h1>
+    <hr />
+    <table border="1" summary="테이블 관련 요소">
+        <tr>
+            <th>일</th>
+            <th>시간</th>
+            <th>여행지 및 활동</th>
+            <th>이미지</th>
+        </tr>
+
+
+        <tr>
+            <td rowspan="2">1일차</td>
+            <td>09:00</td>
+            <td colspan="2">공항</td>
+        </tr>
+        <tr>
+            <!-- <td>1일째</td> -->
+            <td>13:00</td>
+            <td>호텔 체크인</td>
+            <td><img src="./img/photo1.jpg"></td>
+        </tr>
+
+        <tr>
+            <td rowspan="3">2일차</td>
+            <td>11:00</td>
+            <td>
+                <a
+                    href="https://www.tripadvisor.co.kr/Attractions-g469404-Activities-c61-t52-Seminyak_Kuta_District_Bali.html">
+                    스미닉 해변</a>
+            </td>
+            <td><img src="./img/photo2.jpg"></td>
+
+
+
+        <tr>
+            <!-- <td>2일째</td> -->
+            <td>16:00</td>
+            <td>
+                <a href="https://triple.guide/attractions/b1a005f5-2f83-416c-a23d-ad6bb0c79d18">
+                    을루와뚜 해변</a>
+            </td>
+            <td><img src="./img/photo3.jpg"></td>
+        </tr>
+
+
+        <tr>
+            <!-- <td>2일째</td> -->
+            <td>20:00</td>
+            <td colspan="2"> 공항</td>
+            <!-- <td></td> -->
+        </tr>
+
+    </table>
+    </article>
+</body>
+
+</html>
+
+<!-- 
+시멘틱 테이블 태그를 사용하여 표 구성
+<thead>: 테이블의 머릿말을 나타내는 그룹 
+<tbody> : 테이블의 본문을 나타내는 그룹
+<tfoot> : 테이블의 꼬릿말을 나타내는 그룹
+summary : 스크린 리더를 이용하여 테이블 읽음   
+-->

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 테이블 이용</title>
+</head>
+<body>
+    <article>
+        <table border="1" summary="테이블 관련 요소">
+            <caption> Semantic Table</caption>
+
+
+            <thead>
+            <tr>
+                <th>태그명칭</th>
+                <th>설명</th>
+                <th>사용 여부</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Thead</td>
+                    <td>표 머릿말(head) 부분의 그룹 태그</td>
+                    <td>가능</td>
+                </tr>
+                <tr>
+                    <td>TBody</td>
+                    <td>표 본문(body) 부분의 그룹태그</td>
+                    <td>가능</td>
+                </tr>
+                <tr>
+                    <td>Tfoot</td>
+                    <td>표 꼬릿말(foot) 부분의 그룹태그</td>
+                    <td>가능</td>
+                </tr>
+
+            </tbody>    
+            <tfoot>
+                <tr>
+                    <td colspan="3"> 참고 사이트 : http://www.w3c.org</td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </article>
+</body>
+</html>
+
+<!-- 
+시멘틱 테이블 태그를 사용하여 표 구성
+<thead>: 테이블의 머릿말을 나타내는 그룹 
+<tbody> : 테이블의 본문을 나타내는 그룹
+<tfoot> : 테이블의 꼬릿말을 나타내는 그룹
+summary : 스크린 리더를 이용하여 테이블 읽음   
+-->

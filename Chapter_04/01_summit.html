@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Type</title>
+</head>
+
+<body>
+    <h2></h2>
+    <form action="getdata.jsp" method="get">
+        <p>name : <input type="text" name="name" /> </p> 
+        <!--input 할때, 타입은 텍스트, 변수방은 name ""이다.-->
+        <p>major : <input type="text" name="major" /> </p>
+        <p></p>
+        <input type="submit" value="확인">
+        <input type="reset" value="재작성">
+    </form>
+</body>
+
+</html>
+
+<!-- 
+Get 방식 : 서버로부터 정보 요청(요청된 정보가 url에 노출됨 >> 보안 취약)
+Post 방식 : 서버로 데이터를 전송 처리하는 데 사용(전송되는 정보가 노출되지 않음)   
+
+비유를 하자면
+post는 우체통에 넣어야지 나와(우체통에 정보를 넣기 - 정보가 안보임/ 서버한테 줄테니까 뭐해줘)
+get은 서버에 정보를 얻기(우체통에 있는 정보를 꺼내오기-정보가 보임/ 서버에 있는 것 가져오기)
+
+name
+id  -->

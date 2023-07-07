@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+
+<body>
+    <h3>선택사항을 직접 입력하시오</h3>
+    <form action="getdata7.jsp" method="get">
+        <label> 전공 분야 선택
+            <input type="text" list="majorList" name="major">
+            <datalist id="majorList">
+                <optgroup label="computer">
+                    <option value="SoftWare">소프트웨어</option>
+                    <option value="Robot">로봇</option>
+                    <option value="System">시스템</option>
+                    <option value="AI">인공지능</option>
+                </optgroup>
+            </datalist>
+        </label>
+        <p></p>
+        <input type="submit" value="제출">
+        <input type="reset" value="재작성">
+    </form>
+</body>
+
+</html>
