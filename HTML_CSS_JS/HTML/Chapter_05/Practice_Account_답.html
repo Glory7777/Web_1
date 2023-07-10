@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+
+<body>
+    <h1>회원 가입</h1>
+    <hr>
+    <form action="SignUp.html" method="post">
+        <fieldset>
+            <legend>계정 정보</legend>
+            <div>
+                <label for="id-account">아이디</label>
+                <input type="text" name="account" id="acoount" required>
+            </div>
+            <div>
+                <label for="id-pw">비밀번호</label>
+                <input type="password" name="pw" required="required">
+            </div>
+            <div>
+                <label for="id-pwok">비밀번호 확인</label>
+                <input type="password" name="pwok" required="required">
+            </div>
+        </fieldset>
+        <p></p>
+
+        <fieldset>
+            <legend>프로필</legend>
+            <div>
+                <label for="id-name">이름 </label>
+                <input type="text" name="name" id="id-name" required>
+
+                <div>
+                    <label for="id-born">생년월일</label>
+                    <input type="number" min="1920" max="2050" placeholder="년" required>
+
+                    <select name="count" required>
+                        <option value="">월</option>
+                        <option value="1월">1월</option>
+                        <option value="2월">2월</option>
+                        <option value="3월">3월</option>
+                        <option value="4월">4월</option>
+                        <option value="5월">5월</option>
+                        <option value="6월">6월</option>
+                        <option value="7월">7월</option>
+                        <option value="8월">8월</option>
+                        <option value="9월">9월</option>
+                        <option value="10월">10월</option>
+                        <option value="11월">11월</option>
+                        <option value="12월">12월</option>
+
+                    </select>
+                    <input type="number" name="birth-day" min="1" max="31" placeholder="일" required>
+                </div>
+                <div>
+                    <label>성별</label>
+                    <input type="radio" name="gender" value="male" checked> 
+                    <label for="id-gender-male"> 남자 </label> 
+                    <input type="radio" name="gender" value="female"> 
+                    <label for="id-gender-female"> 여자 </label> 
+                    <input type="radio" name="gender" value="other"> 
+                    <label for="id-gender-unknown"> 기타 </label> 
+                </div>
+            </fieldset>
+            <div>
+                <input type="checkbox" name="agree" id="id-agree" required> 
+                <label for="id-agree"> 사이트 이용약관과 개인정보 수집 방침에 동의합니다 </label>
+            </div>
+            <input type="submit" value="가입하기">
+        </form>
+</body>
+
+</html>

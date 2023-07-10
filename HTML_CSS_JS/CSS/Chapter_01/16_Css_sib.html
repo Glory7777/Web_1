@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent</title>
+    <style type="text/css">
+        h1 ~ ul {
+                color: blue;
+            }
+        div ~ h3 {color: red;}
+        h3 ~ p{
+            color: purple; background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1>형제 선택자1</h1>
+            <h2>형제 선택자2</h2>
+            <ul>목록
+                <li>주제1</li>
+                <li>주제2</li>
+            </ul>
+        </div>
+        <h3>sibling selector-1</h3>
+        <h4>같은 레벨 형제</h4>
+        <p>일반 형제 선택자에 의한 스타일 적용</p>
+        <h3>sibling selector_2</h3>
+        <h3>sibling selector_3</h3>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorderRadius</title>
+    <style type="text/css">
+        body {
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .br1 {
+            background-color: lime;
+            color: red;
+            border-style: solid;
+            border-width: thick;
+            border-color: green;
+            border-radius: 30%;
+        }
+
+        .br2 {
+            background-color: maroon;
+            color: yellow;
+            border-style: dotted;
+            border-width: 2px;
+            border-color: white;
+            /* 15px :왼쪽 위, 오른쪽 아래 / 35px : 오른쪽 위, 왼쪽아래 */
+            border-radius: 15px 35px;
+        }
+
+        .br3 {
+            background-color: teal;
+            color: aqua;
+            border-style: dashed;
+            border-width: 5px;
+            border-color: red;
+            border-radius: 5px 15px 25px 35px;
+        }
+
+        .br4 {
+            border: 3px solid red;
+            border-top-left-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="br1">둥근 모서리 스타일링 예제 1</h1>
+    <h1 class="br2">둥근 모서리 스타일링 예제 2</h1>
+    <h1 class="br3">둥근 모서리 스타일링 예제 3</h1>
+    <h1 class="br4">둥근 모서리 스타일링 예제 4</h1>
+
+</body>
+
+</html>

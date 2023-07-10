@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ▼ 내부스타일 -->
+    <style>
+        p{
+            color: blue ;
+        }
+        p{
+            /* ▼ 중복되는 코드 적용을 막고 특정 스타일을 집중 사용하고자 할 때*/
+            color: rgb(128, 0, 128) !important;
+        }
+        p{
+            color: red; 
+        }
+        
+    </style>
+    <!-- ▼ 외부스타일-->
+    <link type="text/css" rel="stylesheet" href="../style/02_Css_OverRide.css">
+    <title>Css Over Ride</title>
+</head>
+<body>
+    <p> css 가 중복 정의 된 경우 어떤 것이 적용되는가?</p>
+</body>
+</html>

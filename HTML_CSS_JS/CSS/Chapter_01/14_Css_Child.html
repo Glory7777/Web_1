@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child</title>
+    <style type="text/css">
+        /* 자손 선택자 */
+        body>div>h3{
+            color: red;
+        }
+        body>p{
+            color: green;
+            background-color: yellow;
+        }
+        body>h3>std{
+            background-color: orange;
+        }
+        h3>tel>office{
+            color: pink;
+        }
+
+        /* 후손 선택자 - 후손에선 개체가 확실할 때 사용요망 */ 
+        h3 sno {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>child selector_1</h3>
+    </div>
+    <p>자식 선택자</p>
+    <h3>
+        <sno>20231227</sno><br>
+        <std>김석훈</std><br>
+        <tel>
+            <office>02-1234-5678</office><br>
+            <home>010-2345-6548</home>
+        </tel>
+    </h3>
+</body>
+
+</html>

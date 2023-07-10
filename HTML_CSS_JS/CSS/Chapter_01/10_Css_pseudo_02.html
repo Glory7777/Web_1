@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style type="text/css">
+        div {
+            width: 200;
+            height: 100px;
+            opacity: 0.9;
+            color: blue;
+            background-color: green;
+        }
+
+        /* 가상 클래스 */
+        div:hover {
+            width: 400;
+            height: 50px;
+            opacity: 0.5;
+            color: red;
+            background-color: yellow;
+            transition: all 1.5s linear 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>가상 선택자</h2>
+    <div>
+        가상 클래스를 이용한 애니메이션 효과<br />
+        마우스가 위에 있으면 박스가 늘어나요
+    </div>
+</body>
+
+</html>
+
+<!-- 
+
+opacity(0~1): 0.5 -> 불투명도 
+이 글의 예문에 적용된 transition 효과는 익스플로러 9 버젼 이하에서는 작동하지 않음 
+transition-property를 all 로 설정했기 때문에, 
+너비 확장과 높이 확장 모두 transition 효과를 얻는다. 
+즉, 너비 확장과 높이 확장 모두시간에 걸쳐 점진적으로 이루어진다. linear 0.5s : 0.5초 지연후 작동 시작됨 -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin/Padding</title>
+    <style type="text/css" >
+        body {
+            font-weight: bold;
+            font-size: 16pt;
+        }
+
+        .mp1{
+            background-color: aqua;
+            color: red;
+            margin-bottom: 10px;
+            padding-left: 50px;
+        }
+
+        .mp2{
+            background-color: silver;
+            color: green;
+            /* 상하좌우 모두 20px*/
+            margin: 20px;
+            /* 수직(상하) :30px / 수평(좌우):20px */
+            padding: 30px 20px;
+        }
+
+        .mp3{
+            background-color: grey;
+            color: purple;
+            /* 상: 50 / 좌우 : 15 / 하: 20  */
+            margin: 50px 15px 20px;
+            /* 전체 :20px */
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightyellow;">
+    <p>박스 모델의 네 방향 여백 지정</p>
+    <p class="mp1">mp1</p>
+    <p class="mp2">mp2</p>
+    <p class="mp3">mp3</p>
+</body>
+</body>
+
+</html>

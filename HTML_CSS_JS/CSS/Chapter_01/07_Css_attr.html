@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성</title>
+    <style type="text/css">
+        h1[text] {
+            color: blue;
+            background-color: yellow;
+        }
+
+        p[text] {
+            color: red;
+            background-color: green;
+        }
+
+        h1[text="attr3"] {
+            color: azure;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 text="attr1">text 속성 이름 선택자</h1>
+    <h1 text="attr2">text 속성 이름 선택자</h1>
+    <p text>text 속성 이름 선택자</p>
+    <h1 text="attr3">속석과 속성값 선택자</h1>
+    <p>속성 선택 없음</p>
+</body>
+
+</html>

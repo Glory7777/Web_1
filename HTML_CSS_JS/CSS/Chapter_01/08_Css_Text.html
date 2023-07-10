@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <style>
+        p[text] {
+            color: red;
+        }
+
+        p[text="red"] {
+            color: yellow;
+            background-color: purple;
+        }
+
+        /* 리스트 매칭 - ~(필드) : (aa bb cc) 명시되어 있으면 aa bb cc 모두 사용가능: 리스트 배열 1 2 3 모두 매칭하겠다. */
+        p[text~="aa"] {
+            color: yellow;
+            background-color: green;
+        }
+
+        /* 범위 매칭 - |(인더기븐): (a1-a2-a3) 명시되어 있으면 시작 범위인 a1만 사용가능 */
+        p[text|="a1"] {
+            color: yellow;
+            background-color: blue;
+        }
+
+        /* 시작매칭 - ^(캐럿) : 시작명칭 매칭 */
+        p[text^="im"] {
+            color: yellow;
+            background-color: orange;
+        }
+
+        /* 끝매칭 - $(달러) : 끝 명칭 매칭 */
+        p[text$="png"] {
+            color: yellow;
+            background-color: gray;
+        }
+
+                /* 텍스트 패턴 매칭 - *(아스타리스크) : 해당 텍스트가 들어가 있는 패턴에 적용 */
+                p[text*="soldesk"] {
+                    color: yellow;
+                    background-color: pink;
+                }
+    </style>
+</head>
+
+<body>
+    <p text="hello">모든 텍스트</p>
+    <p text="red">텍스트 매칭 속성</p>
+    <p text="aa bb cc">리스트 매칭 속성</p>
+    <p text="a1-a2-a3">범위 텍스트 매칭 속성</p>
+    <p text="img/pic.jpg">텍스트 시작 매칭 속성</p>
+    <p text="img/pic.png">텍스트 끝 매칭 속성</p>
+    <p text="soldesk ong">텍스트 패턴 매칭 속성</p>
+</body>
+
+</html>
+
+<!-- 
+text에서 
+~ : ~ 는 안에 모든 것들을 포함
+| : |(인더기븐)은 시작 앞에 것만 가능 -->

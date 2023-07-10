@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent</title>
+    <style type="text/css">
+        h1 + h2 + ul {
+            color: blue;
+          } /* 형제 선택자 */
+    
+        /* 후손 */
+        /* div ul{
+            color: red;
+        } */
+
+        /* 자손 */
+        /* body>div>ul {
+            color: orange;
+        } */
+        div + h3 {
+            color: red;
+          }
+          h3 + p {
+            color: purple;
+            background: yellow;
+          }
+          p + h3 {
+            color: yellow;
+            background-color: purple;
+          }
+    </style>
+
+    
+</head>
+
+
+
+<body>
+    <div>
+        <h1>인접 형제 선택자1</h1>
+        <h2>인접 형제 선택자2</h2>
+        <ul>목록
+            <li>주제1</li>
+            <li>주제2</li>
+        </ul>
+    </div>
+    <h3>adiacent selector_1</h3>
+    <p>인접 형제 선택자 스타일</p>
+    <h3>adiacent selector_2</h3>
+</body>
+
+</html>
