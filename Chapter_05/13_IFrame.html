@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFrame</title>
+</head>
+<body>
+    <h3>iframe 공간 분할 활용</h3>
+    <div>
+        <span>
+            <a href="intro.html" target="if_a">인사말</a>
+        </span>
+        <span>
+            <a href="lecture.html" target="if_a">강좌안내</a>
+        </span>
+        <span>
+            <a href="info.html" target="if_b">저자 소개</a>
+        </span>
+        <span>
+            <a href="https://supercoding.net/Course/CourseIntro" target="if_b">부트캠프</a>
+        </span>
+    </div>
+    <p></p>
+    <!-- frame 공간 만들기 -->
+    <iframe src="basic.html" width="400" height="200" name="if_a" frameborder="0"></iframe>
+    <iframe src="basic.html" width="400" height="200" name="if_b" scrolling="no"></iframe>
+    <div style="background-color: blanchedalmond;"> 부트캠프(주)</div>
+
+
+</body>
+</html>

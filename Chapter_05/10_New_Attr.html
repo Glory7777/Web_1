@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식의 주요 기능</title>
+</head>
+
+<body>
+    <h2>HTML5 입력 양식</h2>
+    <form>
+        <p>쓰기 기능 : <input type="text" name="name" size="20" placeholder="이름을 입력하세요" autofocus></p>
+        <p>읽기 기능 : <input type="text" name="name" size="10" readonly></p>
+        <p>사용 안함 : <input type="text" name="name" size="10" disabled></p>
+        <p>자동 완성 : <input type="text" name="name" size="10" autocomplete="on" required></p>
+
+        브라우저 메뉴 > 설정 > 언어 > 맞춤법 검사에서 설정 후 사용 가능
+        <textarea cols="50" rows="3" spellcheck="true">오타를 체크합니다.</textarea>
+        <p></p>
+        <input type="submit" value="전송">
+        <input type="reset" value="다시작성">
+
+    </form>
+</body>
+
+</html>
+
+<!-- readonly="readonly" : 이메일 화면을 예로 들면 변경되지 않을 아이디 같은 것들을 읽기만 하는것
+disabled="disabled" : 변경 불가, 사용 못하게 막하게 잠궈놓는 것
+autocomplete 자동완성-->
+
+<!--
+읽기 전용 속성 : readonly
+- 텍스트 상자에 쓰기를 제한하고 오직 읽기만 가능하게 설정
+
+비활성화 속성 : disabled
+-텍스트 상자를 비활성화 시킴
+
+자동 완성 속성 : autocomplete
+-사용했던 데이터를 기준으로 입력 중인 텍스트에 자동 완성 기능을 적용할수 있음
+
+자동 포커스 속성 : autofocus
+-현재 페이지가 로드될 때 처음으로 입력하고자 하는 폼을 선택하는 속성
+
+플레이스 홀더 속성 : placeholder
+-현재 폼에 입력해야 하는 텍스트를 희미하게 보여주는 속성-->
