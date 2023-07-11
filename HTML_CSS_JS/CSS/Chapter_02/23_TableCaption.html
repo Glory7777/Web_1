@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableCaption</title>
+    <style type="text/css">
+        td,
+        th {
+            border: 2px solid black;
+        }
+
+        #c1 {
+            border: 3px solid blue;
+            border-collapse: collapse;
+            caption-side: top;
+        }
+
+        #c2 {
+            border: 3px solid red;
+            border-collapse: collapse;
+            caption-side: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="c1" border="1" width="300px">
+        <caption>[Table 1-1]Korea University</caption>
+        <tr>
+            <th>University</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>서울대학교</td>
+            <td>홍현성</td>
+            <td>KOREA</td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="c2" border="1" width="300px">
+        <caption>[Table 1-1]USA University</caption>
+        <tr>
+            <th>University</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Havard</td>
+            <td>Jackie</td>
+            <td>USA</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radial</title>
+    <style type="text/css">
+        #grad1 {
+            height: 70px;
+            background: red;
+            background: radial-gradient(red, yellow);
+        }
+
+        #grad2 {
+            height: 70px;
+            background: red;
+            background: radial-gradient(red, yellow, green);
+        }
+
+        #grad3 {
+            height: 70px;
+            background: red;
+            background: radial-gradient(red 5%, yellow 15%, green 60%)
+        }
+
+        #grad4 {
+            height: 100px;
+            width: 150px;
+            background: red;
+            background: radial-gradient(circle, red, yellow, green);
+        }
+    </style>
+</head>
+
+<body>
+    <h4>기본 2색 원형 그레이디언트</h4>
+    <div id="grad1"></div>
+    <h4>3색 원형 그레이디언트 </h4>
+    <div id="grad2"></div>
+    <h4>색상 영역 지정(% 단위)</h4>
+    <div id="grad3"></div>
+    <h4>원형 모양 지정(ellipse, circle)</h4>
+    <div id="grad4"></div>
+    <p><strong>참고: </strong>최신 브라우저를 사용해주시기 바랍니다.</p>
+</body>
+
+</html>

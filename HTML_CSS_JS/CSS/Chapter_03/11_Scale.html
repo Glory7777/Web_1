@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px dotted black;
+            background-color: rgb(0, 128, 255);
+            margin: 50px;
+        }
+
+        div#box1 {
+            transform: scale(0.5, 0.5);
+        }
+        
+        div#box2 {
+            transform: scale(2, 1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div>기본 박스</div>
+    <div id="box1">박스 1 (0.5배 축소)</div>
+    <div id="box2">박스 2 (가로 2배, 세로 1.5배 확대)</div>
+</body>
+
+</html>
+<!-- 
+scale : 크기 조정 -->

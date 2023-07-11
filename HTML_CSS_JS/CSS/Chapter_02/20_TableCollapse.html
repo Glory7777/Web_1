@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Collapse</title>
+    <style type="text/css">
+        td, th {
+            border: 2px solid black;
+        }
+
+        #tb1{
+            border: 3px solid red;
+            background-color: yellow;
+            border-collapse: separate;
+            table-layout: auto;
+        }
+        #tb2{
+            border: 3px solid red;
+            background-color: yellow;
+            border-collapse: collapse; /* collapse 는 border 경계선과 결합해서 깔끔하게 표현 */
+            table-layout: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table style id="tb1" width="350px">
+        <tr>
+            <th>table border-collapse</th>
+            <td>separate 적용</td>
+        </tr>
+    </table>
+    <p></p>
+    <table style id="tb2" width="350px">
+        <tr>
+            <th>table border-collapse</th>
+            <td>collapse 적용</td>
+        </tr>
+    </table>
+</body>
+
+</html>

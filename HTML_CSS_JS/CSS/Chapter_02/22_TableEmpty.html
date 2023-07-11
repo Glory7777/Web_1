@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Empty</title>
+    <style type="text/css">
+        td,
+        th {
+            border: 1px solid blue;
+        }
+
+        #tb1 {
+            border-collapse: separate;
+            /* 빈 셀(empty cells)의 내용을 숨김 */
+            empty-cells: hide;
+        }
+
+        #tb2 {
+            border-collapse: separate;
+            /* 빈 셀(empty cells)의 내용을 보임 */
+            empty-cells: show;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="tb1" border="1" width="300px">
+        <tr>
+            <td>국어</td>
+            <td>영어</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>수학</td>
+            <td></td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="tb2" border="1" width="300px">
+        <tr>
+            <td>국어</td>
+            <td>영어</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>수학</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>

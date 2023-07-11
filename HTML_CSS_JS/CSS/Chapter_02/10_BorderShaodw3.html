@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorderShadow</title>
+    <style type="text/css">
+        img{
+            padding: 20px;
+            margin: 20px;
+        }
+        .shadow1{
+            /*bottom, right*/
+            box-shadow: 5px 5px 10px #000;
+        }
+        .shadow2{
+            /*top, right*/
+            box-shadow: 5px -5px 10px #000;
+        }
+    </style>
+</head>
+<body>
+    <img src="pic1.jpg" class="shadow1">
+    <img src="pic2.jpg" class="shadow2">
+</body>
+</html>

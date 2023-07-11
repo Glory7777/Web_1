@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skew 기울기</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px dotted black;
+            background-color: rgb(69, 186, 124);
+            margin: 50px;
+            }
+            
+            div#box1 {
+            /* 50도만큼 수평으로 기울여 표현 */
+            transform: skewX(50deg);
+            }
+            div#box2 {
+            /* -30도만큼 수평으로 반대 방향으로 기울여 표현 */
+            transform: skewX(-30deg);
+            }
+            div#box3 {
+            transform: skewY(40deg);
+            }
+    </style>
+</head>
+<body>
+    <div>기본 박스</div>
+    <div id="box1">박스 1</div>
+    <div id="box2">박스 2</div>
+    <div id="box3">박스 3</div>
+    
+</body>
+</html>
+<!-- 
+skew : x축, y축 방향으로 기울기
+x축이 양수 - 상단 왼쪽, 하단 오른쪽
+y축이 양수 - 상단 왼쪽, 하단 오른쪽,  우측 아래, 좌측 위 -->

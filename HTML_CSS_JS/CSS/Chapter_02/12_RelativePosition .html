@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상대 위치(Relative Position)</title>
+    <style type="text/css">
+        body{
+            font-weight: bold;
+            font-size: 12pt;
+        }
+        .sp{
+            position: static;
+            left: 90px;/*static이므로 적용 되지 않음,    0,0 시작이기에*/ 
+            background-color: aqua;
+            width: 400px;
+            height: 50px;
+        }
+        .rp1{ /* 상위 position을 기준으로 왼쪽으로 30, 위쪽으로 10만큼 이동 */
+            position: relative;
+            left: 30px;
+            top: 10px;
+            background-color: orange;
+            width: 400px;
+            height: 50px;
+        }
+        .rp2{ /* 상위 position을 기준으로  왼쪽으로 60, 아래쪽으로 20만큼 이동 */
+            position: relative;
+            left: 60px;
+            top: 20px;
+            background-color: grey;
+            width: 400px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>positioning style 1</h1>
+    <p class="sp">정적 위치설정 적용1</p>
+    <div class="rp1">상대 위치설정 적용 - left 30px, top -10px</div>
+    <p class="rp2">상대 위치설정 적용 - left 60px, top 20px</p>
+</body>
+</html>
+
+<!-- 
+Position 속성은 HTML 요소가 위치를 결정하는 방식을 설정한다.
+
+1. 정적 위치(static position)  - 첫 시작 0,0 에서 위치설정
+2. 상대 위치(relative position) - 상위 position을 기준 / 부모를 기준으로 상대 위치 설정
+3. 고정 위치(fixed position)
+4. 절대 위치(absolute position) -->

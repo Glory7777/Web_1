@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Spacing</title>
+    <style type="text/css">
+        td, th{
+            border:  1px solid red;
+        }
+
+        #tb1{
+            border: 2px solid green;
+            border-spacing: 10px; /* 테이블의 셀 간격을 10셀로 설정, 박스에서 padding sheet 준 것과 같다.*/
+        }
+
+        #tb2{
+            border: 3px solid maroon;
+            border-spacing: 20px 40px; /* 수평 20px 좌우 , 수직 40px */
+            background-color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <table style id="tb1" width="350px">
+        <tr>
+        <th>table border-spacing</th>
+        <td>10px</td>
+        </tr>
+        </table>
+        <p></p>
+        <table style id="tb2" width="350px">
+        <tr>
+        <th>table border-spacing</th>
+        <td>20px 40px</td>
+        </tr>
+        </table>
+</body>
+</html>

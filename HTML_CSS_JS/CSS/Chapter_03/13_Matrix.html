@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix</title>
+    <style type="text/css">
+        div {
+            width: 50px;
+            height: 50px;
+            border: 1px dotted black;
+            background-color: rgb(128, 128, 128);
+            text-align: center;
+        }
+
+        div#box1 {
+            transform: matrix(1, 0, 0, 1, 100, 0);
+        }
+
+        div#box2 {
+            /* x 축으로 -1만큼 기울이고, x 축과 y 축으로 각각 50 단위만큼 이동시키며 스케일링 요소는 변하지 않음. */
+
+            transform: matrix(1, 1, -1, 1, 50, 50);
+        }
+
+        div#box3 {
+            /* x 축으로 50 단위, y 축으로 100 단위 이동시키는 효과를 부여하며. 크기와 기울임은 변하지 않음 */
+            transform: matrix(1, 0, 1, 1, 50, 100);
+        }
+
+        div#box4 {
+            /* x 축과 y 축으로 기울이고, x 축으로 50 단위, y 축으로 150 단위 이동시키는 효과. 크기는 변하지 않음. */
+            transform: matrix(1, 2, 2, 1, 50, 150);
+        }
+    </style>
+</head>
+
+<body>
+    <div>기본 박스</div>
+    <div id="box1">박스 1</div>
+    <div id="box2">박스 2</div>
+    <div id="box3">박스 3</div>
+    <div id="box4">박스 4</div>
+</body>
+
+</html>
+<!-- 
+matrix(scaleX(), skewX(), skewY(), scaleY(),  TranslateX(), TranslateY()) -->

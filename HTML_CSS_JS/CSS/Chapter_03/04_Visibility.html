@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility</title>
+    <style type="text/css">
+        .v1{
+            visibility: hidden;
+            border: 1px dotted red;
+        }
+
+        .v2{
+            visibility: visible;
+            border: 1px dotted red;
+        }
+
+        .v3{
+            display: none;
+            border: 1px dotted red;
+        }
+
+        .v4{
+            visibility: hidden;
+            border: 1px dotted red;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 보이지 않도록 설정 : 공간 있음(레이아웃은 남아 있음) -->
+    <div class="v1"></div>
+        <img src="pic1.jpg">
+    <div class="v2"></div>
+    <img src="pic1.jpg">
+        <!-- 보이지 않도록 설정 : 공간 없음(레이아웃을 제거) -->
+    <div class="v3"></div>
+    <img src="pic1.jpg">
+
+    <div class="v4"></div>
+    <img src="pic1.jpg">
+</body>
+</html>
+
+<!-- visibility : 문서의 레이아웃을 연출한다 즉 레이아웃은 그대로 두고 요소를 보이거나 숨김
+Table 태그의 행이나 열을 숨길 수도 있음 -->

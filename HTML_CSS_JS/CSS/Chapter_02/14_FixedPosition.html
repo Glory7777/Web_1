@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Position</title>
+    <style type="text/css">
+        body{
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .p{
+            background-color: yellow;
+            width: 300px;
+            height: 50px;
+        }
+
+        .fp{ /* 강조 사항이나 계속 보여줘야할 정보일 때 사용, 외우기 */
+            position: fixed;
+            right: 5px; /* 오른쪽 위에서 출발 */
+            top: 5px;
+            background-color: lightgreen;
+            width: 300px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>positioning style4</h1>
+    <p class="p">기본 위치 설정 박스1</p>
+    <p class="p">기본 위치 설정 박스2</p>
+    <p class="p">기본 위치 설정 박스3</p>
+    <p class="p">기본 위치 설정 박스4</p>
+    <p class="p">기본 위치 설정 박스5</p>
+    <p class="fp">고정 위치 설정 박스 : 오른쪽 스크롤 위아래로 이동해보기</p>
+</body>
+
+</html>

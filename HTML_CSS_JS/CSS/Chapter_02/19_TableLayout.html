@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style type="text/css">
+        td, th{
+            border: 1px solid red;
+        }
+
+        #tb1{
+            border:  2px solid red;
+            table-layout: auto;
+        }
+
+        #tb2{
+            border:  2px dotted  green;
+            table-layout: fixed;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>table layout auto</h2>
+    <table id="tb1">
+        <tr>
+            <th>table layout auto</th>
+            <td>내용 분량에 따라서 자동조절 </td>
+        </tr>
+    </table>
+    <h2>table layout fixed</h2>
+    <table id="tb2" width="250px">
+        <tr>
+            <th>table layout fixed</th>
+            <td>내용 분량에 상관없이 고정</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px dotted black;
+            background-color: lightseagreen;
+        }
+
+        div#box1 {
+            transform: rotate(45deg);
+        }
+
+        div#box2 {
+            transform: rotate(-90deg); /* 반시계 방향 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>기본 박스</div>
+    <div id="box1">박스 1 (45deg)</div>
+    <div id="box2">박스 2 (-90deg)</div>
+
+</body>
+
+</html>
+<!-- 
+rotate : 요서를 주어진 각도만큼 시계방향 또는 반시계 방향으로 회전시킴 -->

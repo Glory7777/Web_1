@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: yellow; 
+        }
+        .c1:hover{
+            /* 변환시 기준 위치를 설정 */
+            transform-origin: 50% 50% 0px;
+            transform: translate(0px, 0px) rotate(-45deg) scale(0.7);
+            background-color: green;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="c1">박스 안에 마우스를 올리면 무엇이 나올까요?</div>
+        </div>
+</body>
+</html>
+<!-- 
+transform-origin : X축 방향의 비율, Y축 방향의 비율, Z축 방향의 이동거리 / 변환시 기준 위치를 설정, 즉 중심 축 선정-->

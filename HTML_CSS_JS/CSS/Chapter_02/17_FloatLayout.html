@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Layout</title>
+    <style type="text/css">
+        div{
+            border:  3px solid blue;
+        }
+        .fix{
+            overflow: auto;
+        }
+        nav{
+            float: left;
+            width: 200px;
+            border: 3px solid green;
+        }
+        section{
+            margin-left: 210px;
+            border: 3px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="fix">
+        <nav>
+            <span>목차</span>
+            <ul>
+                <li><a href="http://www.google.com" target="_blank">google</a></li>
+                <li><a href="http://www.apple.com" target="_blank">apple</a></li>
+                <li><a href="http://www.w3.org" target="_blank">w3c</a></li> <!-- w3.org -->
+                <li><a href="http://www.oracle.com" target="_blank">oracle</a></li>
+                <li><a href="http://www.adobe.com" target="_blank">adobe</a></li>
+                <li><a href="http://www.amazon.com" target="_blank">amazon</a></li>
+                <li><a href="http://www.mysql.com" target="_blank">mysql</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <span> section 1</span>
+            <p>float 속성은 시맨틱 문서 구조에 유용하게 사용할 수 있습니다. 예를 들면 nav나 aside(보조내용이나 광고를 배치하는 곳 )에 float 속성을 추가하면 떠다니는 내비게이션 또는
+                사이드
+                바를 만들 수 있습니다.</p>
+        </section>
+        <section> <span>section 2</span>
+            <p>시맨틱 문서 구조에 float 속성을 적용할 때는 footer 부분에 적용되지 않도록 해야 합니다.</p>
+        </section>
+    </div>
+</body>
+
+</html>
