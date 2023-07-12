@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            color: orange;
+            position: absolute;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        #div1 {
+            background-color: yellow;
+            animation-direction: normal;
+            animation-name: L-box;
+        }
+        
+        #div2 {
+            background-color: blue;
+            animation-direction: reverse;
+            animation-name: R-box;
+        }  
+
+        @keyframes L-box{
+            0%{left: 0px;}
+            50%{left: 200px;}
+            100%{left: 0px;}
+        }
+
+        @keyframes R-box{
+            0%{left: 400px;}
+            50%{left: 200px;}
+            100%{left: 400px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"> 왼쪽 박스 </div>
+    <div id="div2"> 오른쪽 박스</div>
+</body>
+</html>

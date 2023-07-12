@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <script>
+        function getGrade(){// 함수 정의
+            kor=95; //var 키워드 생략시 자동으로 전역변수 취급함(힙)
+        }
+        var kor=100; // 전역 변수(힙)
+
+        getGrade(); //함수 호출
+        document.write("국어 점수 : " + kor + "<br>");
+    </script>
+</body>
+</html>
+<!-- 
+변수명 재선언시 데이터 값은 변동되지 않음 -->

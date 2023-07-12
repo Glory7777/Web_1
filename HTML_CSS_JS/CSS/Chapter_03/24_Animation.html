@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            background: navy;
+            position: relative;
+            animation: boxmove 5s linear infinite alternate;
+        }
+
+        /* 애니메이션의 특정지점을 지정하는 키 프레임 */
+        @keyframes boxmove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 300px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>애니메이션 박스</div>
+    <p>
+        <strong>참고: </strong>boxmove 5s linear infinite alternate : boxmove가 5초(5s) 동안 일정한(linear)
+        속도로 양방향(alternate) 무한반복(infinte)
+    </p>
+</body>
+
+</html>

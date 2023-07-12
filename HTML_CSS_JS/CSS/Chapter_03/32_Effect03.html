@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+    <style type="text/css">
+        div{
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            position: absolute;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+        }
+
+        #b1{
+            left: 10px;
+            background: red;
+            animation-duration: 5s;
+        }
+
+        
+        #b2{
+            left: 50px;
+            background: blue;
+            animation-duration: 10s;
+        }
+
+        
+        #b3{
+            left: 90px;
+            background: green;
+            animation-duration: 3s;
+        }
+
+        
+        #b4{
+            left: 130px;
+            background: silver;
+            animation-duration: 7s;
+        }
+
+        
+        #b5{
+            left: 170px;
+            background: black;
+            animation-duration: 2s;
+        }
+
+     
+
+        @keyframes bounce{
+            from, to {
+                bottom: 0px;
+                animation-timing-function: ease-out;
+            }
+
+            50% {
+                bottom: 200px;
+                animation-timing-function: ease-in;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="b1"></div>
+    <div id="b2"></div>
+    <div id="b3"></div>
+    <div id="b4"></div>
+    <div id="b5"></div>
+</body>
+</html>

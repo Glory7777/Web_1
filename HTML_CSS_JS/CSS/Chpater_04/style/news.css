@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+div.container{
+    max-width: 800px;
+    margin: 0 auto; /* 가운데 정렬 */
+    border: 3px solid gray;
+    padding:  30px;
+}
+
+.news-company{
+    font-weight: 900;
+}
+
+header h1 {
+    margin:  5px 0;
+
+}
+
+.header-desc{
+ text-align: right;
+}
+
+header span.time-dasc{
+ text-align: right ;
+ font-weight: 300;
+ font-size: 15px;
+ color: gray;
+ opacity: 0.8;
+}
+
+button.white-button{
+ background-color: white;
+ border: 1px solid black;
+ margin: 0 2px;
+ padding:  5px 10px;
+}
+
+.img-box{
+
+    background-color: gainsboro;
+    text-align: center;
+    /*
+    padding: 20px 20px 0px 20px; */
+    
+}
+.img-box img{
+    width: 100%; 
+   
+}
+
+.img-box span{
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    color: gray;
+    line-height: 0.5;
+}
+
+.paragraph-group{
+border-top: 2px solid black;
+}
+
+.paragraph-group p{
+    
+    text-indent: 16px;
+    font-size: 17px;
+}
+
+footer{
+    padding: 5px 30px;
+}
+
+.link-group{
+    margin-bottom: 30px;
+
+}
+
+.link-group h4{
+    margin: 2px;
+}
+
+
+
+.link-group ul{
+    list-style-type: square;
+
+}
+
+
+.link-group li{
+    margin: 5px;
+ 
+}
+.link-group li > a{
+    font-weight: 800;
+    text-decoration: none;
+
+}
+
+.link-group li > a:visited{
+    
+    text-decoration: none;
+    color: rebeccapurple;
+    font-weight: 800; /* bold */
+    
+}
+
+.link-group li > a:hover{
+    
+    text-decoration: none;
+    color: red;
+    font-weight: 800; /* bold */
+    
+}
+
+
+/* 
+예시 코드
+
+@charset "UTF-8";
+
+div.container {
+max-width: 600px;
+margin: 0 auto; 
+border: 3px solid #c0c0c0;
+padding: 30px;
+}
+
+.news-company {
+font-weight: 900;
+}
+
+header h1 {
+margin: 5px 0;
+}
+
+.header-desc {
+text-align: right;
+}
+
+header span.time-desc {
+font-size: 12px;
+color: #909092;
+}
+
+button.white-button {
+background-color: #fff;
+border: 1px solid #606060;
+margin: 0 2px;
+padding: 5px 10px;
+}
+
+.image-box {
+text-align: center;
+background-color: #f0f0f0;
+padding: 20px, 20px, 0px, 20px;
+}
+
+.image-box img {
+width: 100%;
+}
+
+.image-box span {
+width: 100%;
+color: #909090;
+font-size: 13px;
+}
+
+.paragraph-group {
+margin: 50px 0;
+border-top: 1px solid #000;
+}
+
+.paragraph-group p {
+font-size: 16px;
+color: #606060;
+text-indent: 16px;
+}
+
+footer {
+padding: 5px 30px;
+}
+
+.link-group {
+margin-bottom: 30px;
+}
+
+.link-group h4 {
+margin: 2px;
+}
+
+.link-group ul {
+list-style: square;
+}
+
+.link-group li {
+margin: 5px;
+}
+
+.link-group li > a {
+color: #b16060;
+font-weight: 800;
+}
+
+.link-group li > a:visited {
+color: #0000ff;
+font-weight: 800;
+}
+
+.link-group li > a:hover {
+color: #00ff00;
+font-weight: 800;
+} 
+
+*/

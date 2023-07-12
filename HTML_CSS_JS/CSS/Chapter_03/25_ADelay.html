@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 50px;
+            background: red;
+            position: relative;
+            animation: boxmove 5s linear infinite alternate;
+        }
+
+        #box1 {
+            animation-delay: 3s;
+        }
+
+        #box2 {
+            animation-delay: 5s;
+        }
+
+        /* 애니메이션의 특정지점을 지정하는 키 프레임 */
+        @keyframes boxmove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 300px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">애니메이션 박스 1</div>
+    <div id="box2">애니메이션 박스 2</div>
+    <p>
+        <strong>참고: </strong> 애니메이션 박스를 다수 작동하되 시간 차이를 두고 움직임
+    </p>
+</body>
+
+</html>
