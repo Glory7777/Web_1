@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <script>
+        function getGrade(){// 함수 정의
+            var kor=95; // 지역 변수(스택)
+            return kor;
+
+        }
+        
+
+        getkor=getGrade(); //함수 호출
+        document.write("국어 점수 : " + getkor + "<br>");
+    </script>
+</body>
+</html>
+
+<!-- 
+전역 변수를 선언은 회의를 거쳐 미리 협의, 조심히써야함. -->

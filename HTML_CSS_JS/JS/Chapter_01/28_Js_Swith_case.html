@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <script>
+        var text;
+        //key 생성
+        var week = new Date().getDay(); // 0(일요일) ~ 6(토요일),    new는 새로운 객체 , 창고 ,힙, 레퍼런스 참고
+
+        switch (week) {
+            case 1:
+            case 2:
+                text = "CSS";
+                break; // break : block 밖으로 탈출 넣어줘야함 안그럼 쭉 내려감
+
+            case 3:
+            case 4:
+                text = "Spring";
+                break;
+            case 5:
+            case 6:
+                text = "Python";
+                break;
+            case 0:
+                text = "JS";
+                break;
+
+            default:
+                text = "Total."
+        }
+
+        document.write("오늘은 <b>" + text + "<b>학습하는 날 입니다." + '<br>')
+    </script>
+</body>
+
+</html>

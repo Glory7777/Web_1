@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        function printMsg(name, age) {
+            document.write("학생 이름 :  " + name + "<br>");
+            document.write("학생 나이 :  " + age + "<br>");
+        }
+    </script>
+
+</head>
+<body>
+
+<!--  스크립에 넣어도 내용 동일함 / 헤드에 스크립 펑션이 선언되고 객체 저장 이후 바디 내용 기입 쓰는 것이기에 문제 없음.
+    <script>
+        function printMsg(name, age) {
+            document.write("학생 이름 :  " + name + "<br>");
+            document.write("학생 나이 :  " + age + "<br>");
+        }
+    </script> -->
+
+    <button type="button" onclick="printMsg('이민성', 21)"> 학생정보</button>
+</body>
+</html>

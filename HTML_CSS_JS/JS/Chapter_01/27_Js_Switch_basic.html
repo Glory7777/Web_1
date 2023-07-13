@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <script>
+        var day;
+        //key 생성
+        var week = new Date().getDay(); // 0(일요일) ~ 6(토요일),    new는 새로운 객체 , 창고 ,힙, 레퍼런스 참고
+
+        switch (week) {
+            case 0:
+                day = "일요일";
+                break;
+            case 1:
+                day = "월요일";
+                break;
+            case 2:
+                day = "화요일";
+                break;
+            case 3:
+                day = "수요일";
+                break;
+            case 4:
+                day = "목요일";
+                break;
+            case 5:
+                day = "금요일";
+                break;
+            case 6:
+                day = "토요일";
+                break;
+
+                default :  
+                day = "없는 요일 입니다."
+        }
+
+        document.write("오늘은 <b>" + day+ "<b> 입니다." + '<br>')
+    </script>
+</body>
+
+</html>

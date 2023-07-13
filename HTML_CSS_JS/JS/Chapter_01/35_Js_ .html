@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <script>
+        var x=1;
+        var sum=0;
+        while(1){
+                sum += x;
+                x++;
+            
+            if(x >= 10000) {
+                sum-=x;
+                break;
+            }
+        }
+        document.write(" <p>");
+        document.write("1부터 시작하여 결과 합이 10000이하 : <b>" + sum + "<b>입니다 ");
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+    var x=0;
+var sum = 0;
+while(1){
+if(sum>10000){
+sum-=x
+break;
+}
+sum+=x;
+x++;
+}
+document.write("1부터 시작하여 결과값이 10000이하의 값 : <b>" + sum + "<b> 입니다.");
+
+-->

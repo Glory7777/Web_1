@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+
+    <script>
+        //함수의 객체  , 객체는 선언전에는 호출 불가능
+        var printMsg = function(msg) {
+            document.write(" 무명 함수 : " + msg + "<br/>");
+        };
+        
+        function printMsg(msg) {
+            document.write(" 기본함수가 " + msg + "<br>")
+        };
+        
+
+
+
+        printMsg("호출되었습니다.");
+    </script>
+
+</body>
+</html>

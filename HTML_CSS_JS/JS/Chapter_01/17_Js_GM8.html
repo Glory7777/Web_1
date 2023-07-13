@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <script>
+        var intData=1;
+        var decData=5; 
+        var r1=r2=0;
+        r1=r2=0;
+        r1=15 % 6;
+        document.write("15%6 "  +r1+ "<br>");
+        // intData++ : intData=intData+1
+        document.write("intData++ " + intData++ + "<br>"); // 후위 연산
+        // ++intData : intData+1=intData
+        document.write("++intData " + ++intData + "<br>"); // 전위 연산
+
+        document.write("decData-- " + decData + "<br>"); // 후위 연산
+        document.write("--decData " + --decData + "<br>"); // 전위 연산\
+        r2 = intData * decData;
+        document.write("intData*decData:" + r2+ "<br>");
+    </script>
+</body>
+</html>
+
+<!-- 
+전역 변수를 선언은 회의를 거쳐 미리 협의, 조심히써야함. -->

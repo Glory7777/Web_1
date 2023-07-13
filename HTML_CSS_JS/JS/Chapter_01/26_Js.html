@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <script>
+        var point=prompt('점수를 입력해주세요.');
+        /* var point=93; */ // 과목 점수
+        var grade="";
+        if(point>100) {
+        document.write("0~100점 사이 값을 입력해야 합니다." + "<p/>");
+        }
+        else if(point>=90) {
+        grade="A";
+        document.write("아주 잘했어요." + "<p/>");
+        }
+        else if(point>=80) {
+        grade="B";
+        document.write("잘했어요." + "<p/>");
+        }
+        else if(point>=70) {
+        grade="C";
+        document.write("조금만 노력하면 잘할 수 있어요." + "<p/>");
+        }
+        else if(point>=60) {
+        grade="D";
+        document.write("좀 더 노력하세요." + "<p/>");
+        }
+        else{
+        grade="F";
+        document.write("많이 노력하시기 바랍니다." + "<p/>");
+        }
+        document.write("학생의 학점은 <b>" + grade + "</b>입니다.<p/>");
+        </script>
+</body>
+</html>
