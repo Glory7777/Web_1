@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+
+    <script>
+        var ndata1 = [19, 38, 67, 26, 55, 24, 53, 12, 31];
+        var ndata2 = [132, 2, 41, 123, 45, 1234, 6, 29, 4567];
+        var edata = ["Apple", "Html", "Game", "Computer", "Java"];
+        var kdata = ["서울", "부산", "군포", "대구", "인천"];
+
+        document.write("수치정렬1 : " + ndata1.sort() + "<p>");
+        document.write("수치정렬2 : " + ndata2.sort() + "<p>");
+        document.write("수치정렬3 : " + ndata2.sort(function (a, b) { return a - b; })  //오름차순  //앞에서 뒤에껄뺏을때 음수가 나오면 ok, 양수가 나오면 자리 대체
+            + "<p>");
+
+        document.write("수치정렬4 : " + ndata2.sort(function (a, b) { return b - a; }) //내림차순   //앞에서 뒤에껄뺏을때 음수가 나오면 교체, 양수가 나오면 자리 ok
+            + "<p>");
+
+        document.write("영문 정렬 : " + edata.sort() + "<p>");
+        document.write("한글 정렬 : " + kdata.sort() + "<p>");
+    </script>
+
+</body>
+
+</html>
+<!-- 
+sort() 메서드에서 비교 함수의 반환 값이 음수, 0, 양수인 경우에 따라 정렬 방식이 달라집니다. 이에 따라 다음과 같은 동작이 발생합니다:
+
+비교 함수가 음수를 반환하면, a가 b보다 작은 것으로 간주하고 a는 b의 앞으로 정렬됩니다. 즉, a - b가 음수인 경우에는 a가 b보다 작은 값이므로 sort() 메서드는 배열을 오름차순으로 정렬합니다.
+비교 함수가 0을 반환하면, a와 b는 같은 값으로 간주되며 순서가 변경되지 않습니다.
+비교 함수가 양수를 반환하면, a가 b보다 큰 것으로 간주하고 a는 b의 뒤로 정렬됩니다. 즉, a - b가 양수인 경우에는 a가 b보다 큰 값이므로 sort() 메서드는 배열을 내림차순으로 정렬합니다.
+따라서, sort() 메서드의 비교 함수에서 a - b를 사용하면 반환 값이 음수이면 오름차순으로, 양수이면 내림차순으로 정렬이 이루어집니다. 이와 반대로, b - a를 사용하면 반환 값이 음수이면 내림차순으로, 양수이면 오름차순으로 정렬이 이루어집니다.
+
+  -->
+
+
+
+  <!-- sort
+영문자의 경우 알파벳순으로 정렬되어 한글은 가나다순으로 정렬된다
+영문자 대소문자가 혼용되어 있으면 대문자 먼저 정렬되므로 toLowerCase()메소드를 사용한 후 정렬한다
+
+자릿수가 다른 수치는 원하는 결과가 나오지 않으므로 오름차순 내림차순 메소드를 사용한다
+오름차순 : sort(function(a, b) {return a-b});
+내림차순 : sort(function(a, b) {return b-a}); -->

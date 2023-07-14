@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사</title>
+</head>
+<body>
+    <script>
+        var list = [
+        {
+        question: "이 중에서 제일 좋아하는 과일을 선택해주세요",
+        options: ["사과", "복숭아", "포도", "바나나", "딸기"],
+        },
+        
+        {
+        question: "이 중에서 제일 좋아하는 음식을 선택해주세요",
+        options: ["떡볶이", "짜장면", "파스타", "찌게", "치킨"],
+        },
+        
+        {
+        question: "이 중에서 제일 좋아하는 반려동물을 선택해주세요",
+        options: ["개", "고양이", "토끼", "새", "여우"],
+        },
+        ];
+
+        console.log(list);
+
+        // list[i] --> 현재 설문지 객체
+
+        for(var i=0; i<list.length; i++){
+            var QustionMsg = list[i].question + "\n";
+
+            for(var j=0; j<list[i].options.length; j++){
+                QustionMsg +=j+1+"."+list[i].options[j]+"\n";
+            }
+            console.log(QustionMsg);
+
+            // 완성된 질문지 (Q_Msg)에 Prompt()함수를 호출하고, 사용자의 입력을 answer라는 변수방에 담는다
+            list[i].answer = prompt(QustionMsg);
+        }
+
+        for(var i=0; i<list.length; i++){
+            // 현재 질문지의 anwer 가 String 상태 이므로 정확한 인덱스번호 추출이 안됨.
+            // 계산이 필요하므로 정수로 형변환
+            var index = parseInt(list[i].answer);
+            var message= list[i].question + "\n당신의 선택:"+list[i].options[index-1];
+            alert(message);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        var data = [];
+        for (var i = 0; i < 10; i++) {
+            data[i] = [
+            String(i + "-" + 0), 
+            String(i + "-" + 1), 
+            String(i + "-" + 2),
+            ];
+        }
+
+        function printData() {
+            for (var x = 0; x < data.length; x++) {// 행
+                for (var y = 0; y < data[x].length; y++) {// 열
+                    document.write(data[x][y] + " ");
+                }
+                document.write("<p>");
+            }
+            document.write("<a href='20_FunArr_ Last.html'>돌아가기</a>");
+        }
+    </script>
+
+</head>
+
+<body>
+    <button type="button" onclick="printData()">전체 배열 데이터 검색</button>
+</body>
+
+</html>

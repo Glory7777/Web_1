@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        var arrdata = [];
+
+        function insertArr() { // 저장
+            var i = 0;
+            for (i = 0; i <= 99; i++) {
+                arrdata[i] = i + 1; // 1~100까지
+                document.write("배열의 크기 : " + arrdata.length + "<P> ");
+            }
+        }
+        //----------------------------------------------------------
+        function delDataArr() {
+            var i;
+            for (i = 0; i < arrdata.length; i++) {
+                    arrdata[i] = 0;
+                
+            }
+            allDataArr();
+        }
+
+        //----------------------------------------------------------
+        function allDataArr(){
+            arrdata.length=0; //배열 초기화
+            selectArr();
+        }
+
+
+
+        //----------------------------------------------------------
+        function selectArr() { // 조회
+            var i;
+            for (i = 0; i < arrdata.length; i++) {
+                document.write(arrdata[i] + " ");
+            }
+            document.write("<p> 배열 크기 : " +arrdata.length +  "<p>");
+            document.write("<a href='03_FunArr copy 2.html'> 돌아가기 </a>");
+        }
+        insertArr();
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="delDataArr()"> 배열 데이터 초기화  </button>  &nbsp; &nbsp;
+    <button type="button" onclick="allDataArr()"> 홀수 번째 데이터 초기화 버튼 </button>
+</body>
+
+</html>
+

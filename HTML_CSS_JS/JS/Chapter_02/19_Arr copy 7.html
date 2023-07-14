@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        // 배열 객체
+        var city = new Array("Seoul", "Busan", "Incheon");
+        function printArr() {
+            var i;
+            for (i = 0; i < city.length; i++) {
+                document.write("배열 데이터 [" + i + "] ="  + city[i] + "<br>");
+            }
+        }
+        printArr();
+    </script>
+</body>
+</html>
+<!-- 
+자바 작성법
+var city = new Array(3); 이라 미리 설정해줘야함 
+
+튜플은 객체를 만들어서 사용해야함-->

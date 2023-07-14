@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <script>
+        var data = [1,2,3,4,5,6,7,8,9,10];
+        var sum=0;
+        
+        function addArr(value) {
+            sum+= value; // 전역 변수 - 데이터 영역 : 펑션 밖에서도 사용 가능
+        }
+        // For each ()
+        data.forEach(addArr);
+        document.write("배열의 데이터 합: " + sum+ "<br>")
+    </script>
+</body>
+</html>

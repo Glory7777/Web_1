@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        var arr0 = [10, 20, 30, 40, 50];
+        var arr1 = [11, 21, 31, 41, 51];
+        var arr2 = [12, 22, 32, 42, 52];
+        var arr3 = [13, 23, 33, 43, 53];
+        var allArr = [arr0, arr1, arr2, arr3]; //2차원 배열
+        var partArr = [arr1, arr3]; //2차원 배열
+
+
+        function printAll() {
+            for (var x = 0; x < allArr.length; x++) {// 행- 각행을 가져오기
+                for (var y = 0; y < allArr[x].length; y++) {// 열 - 각 행의 열 가져오기
+                    document.write(allArr[x][y] + " ");
+                }
+                document.write("<p>");
+            }
+            document.write("<a href='19_FunArr_ Allarr_Partarr.html'>돌아가기</a>");
+        }
+
+
+        function printPart() {
+            for (var x = 0; x < partArr.length; x++) {// 행- 각행을 가져오기
+                for (var y = 0; y < partArr[x].length; y++) {// 행 - 각 행의 열 가져오기
+                    document.write(partArr[x][y] + " ");
+                }
+                document.write("<p>");
+            }
+            document.write("<a href='19_FunArr_ Allarr_Partarr.html'>돌아가기</a>");
+        }
+    </script>
+
+</head>
+
+<body>
+    <button type="button" onclick="printAll()">전체 배열 데이터 검색</button>
+    <button type="button" onclick="printPart()">홀수 배열 데이터 검색</button>
+</body>
+
+</html>

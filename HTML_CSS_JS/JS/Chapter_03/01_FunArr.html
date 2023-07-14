@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var arrdata=[];
+
+        function insertArr(){ // 저장
+            var i=0;
+            for(i=0; i<=99; i++){
+                arrdata[i] = i+1; // 1~100까지
+                document.write(arrdata[i]+ " ");
+            }
+            selectArr();
+        }
+//----------------------------------------------------------
+        function selectArr(){ // 조회
+            var i;
+            for(i=0; i<arrdata.length; i++){
+                document.write(arrdata[i]+ " ");
+            }
+            addArr();
+        }
+//----------------------------------------------------------
+        function addArr(){
+            var i;
+            var sum=0;
+            for(i=0; i < arrdata.length; i++) {
+                sum += arrdata[i]; //덧셈 연산
+            }
+            document.write("<p>배열 데이터의 덧셈 연산 결과: " + sum + "<p>");
+            document.write("<a href='01_FunArr.html'> 돌아가기 </a>");
+        }
+
+    </script>
+
+    <button type="button" onclick="insertArr()"> 배열 생성 / 조회 / 연산</button>
+</body>
+</html>

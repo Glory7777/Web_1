@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        var arrdata = [];
+
+        function insertArr() { // 저장
+            var i = 0;
+            for (i = 0; i <= 99; i++) {
+                arrdata[i] = i + 1; // 1~100까지
+                document.write(arrdata[i] + " ");
+            }
+        }
+        //----------------------------------------------------------
+        function delArr() {
+            var i;
+            for (i = 0; i < arrdata.length; i++) {
+                if (i % 2 == 0) {
+                    arrdata[i] = 0;
+                }
+                continue;
+            }
+            selectArr();
+        }
+
+        //----------------------------------------------------------
+        function selectArr() { // 조회
+            var i;
+            for (i = 0; i < arrdata.length; i++) {
+                document.write(arrdata[i] + " ");
+            }
+            document.write("<p> 홀수 번째 데이터 초기화 완료: <p>");
+            document.write("<a href='02_FunArr copy.html'> 돌아가기 </a>");
+        }
+        insertArr();
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="delArr()"> 홀수 번째 데이터 초기화 버튼 </button>
+</body>
+
+</html>
+
+
+<!-- 
+방법 1 - 홀수번째를 짝수로 바꿔서 사람이 계산하는 것 처럼 하기
+function delArr() {
+    var i;
+    for (i = 0; i < arrdata.length; i++) {
+
+
+        if((i+1)%2==1) {
+            arrdata[i] = 0;
+        }
+
+
+        continue;
+    }
+    selectArr();
+}
+
+방법 2 - 컴퓨터 식 계산
+function delArr() {
+    var i;
+    for (i = 0; i < arrdata.length; i++) {
+
+
+        if (i % 2 == 0) {
+            arrdata[i] = 0;
+        }
+
+
+        continue;
+    }
+    selectArr();
+} -->

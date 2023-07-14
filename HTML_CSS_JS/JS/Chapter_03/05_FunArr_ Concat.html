@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+
+    <script>
+        var city01 = ["서울", "부산", "대전"];
+        var city02 = ["대구", "광주", "인천"];
+        var city03 = ["전주", "부여", "세종"];
+        // concatenate : 사슬 같이 엮어준다
+        var data1 = city01.concat("수원", "오산");
+        var data2 = city01.concat(city02);
+        var data3 = city01.concat(city03, city02);
+        document.write("조인 결과1 "  + data1 + "<p>");
+        document.write("조인 결과2 "  + data2 + "<p>");
+        document.write("조인 결과3 "  + data3 + "<p>");
+    </script>
+
+</body>
+
+</html>
+

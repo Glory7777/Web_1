@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <script>
+        var data = [10, 20, 30, 40, 20, 30, 70, 30, 90, 100];
+        document.write("배열 데이터 : [" + data + "]<p>");
+        document.write("처음부터 검색한 30의 인덱스 : " + data.indexOf(30) + "<p>"); // 2
+
+        document.write("마지막에 검색한 30의 인덱스 : " + data.lastIndexOf(30) + "<p>"); // 7
+
+
+        document.write("세번째부터 출발해서 검색한 30의 인덱스 : " + data.indexOf(30, 3) + "<p>");  // 5
+
+            
+        document.write("처음부터 검색한 300의 인덱스 : " + data.indexOf(300) + "<p>"); // -1
+
+    </script>
+</body>
+
+</html>

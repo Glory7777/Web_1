@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        var com = [95, 88, , 72, 68, , 99, 82, 78, 85] //10 명중 8명의 점수만 입력
+        var getAge;
+        function printAge() {
+            var i, 
+                sum = 0;
+            var count=0; // 입력 점수 카운트
+            var n = com.length;
+            document.write(n + "명의 점수 입력 <p/>");
+            for (i = 0; i < n; i++) {
+                if(com[i]===undefined){
+                    continue;
+                }else{
+                    sum += com[i];
+                    count++;
+                }
+
+            }
+            document.write("점수를 입력한 학생: "+count+ + "명 <p/>");
+            document.write("총점 : "+ sum + "<p>")
+            return (sum / count);
+
+        }
+        getAge = printAge();
+        document.write("평균 : <b>" + getAge + "<b><P>")
+    </script>
+</body>
+
+</html>

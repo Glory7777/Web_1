@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var arr = [10, 20, 30, 40, 50]; 
+        function printArr() {
+            var i,  
+            sum=0;
+            for (i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+        var result= printArr();
+        document.write("배열의 원소 합 " + result + "<br>");
+    </script>
+</body>
+</html>
+<!-- 
+"": 스트링 표현할 때 
+'': 스트링 처리 뺀 나머지 값을 처리할때 - 매개변수, 매서드 속성 값, 옵션 준다던가
+
+파이썬은 따로 크게 구별하지 않음
+ -->
+
