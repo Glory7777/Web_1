@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event.currentTarget</title>
+</head>
+<body>
+    <div id="outer">
+        <button id="myButton"> 클릭</button>
+
+    </div>
+
+    <script>
+        var outer=document.getElementById("outer");
+        var button=document.getElementById("myButton");
+
+        function handleClick(event){
+            console.log("현재 요소: ", event.currentTarget);
+            console.log("이벤트가 발생한 요소: ", event.target);
+        }
+        outer.addEventListener("click", handleClick);
+        button.addEventListener("click", handleClick);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+</head>
+
+<body>
+  <p id="car"></p>
+  <p>[Car 1 속성]</p>
+  <p id="car0"></p>
+  <p>[Car 2 속성]</p>
+  <p id="car1"></p>
+  <p>[Car 3 속성]</p>
+  <p id="car2"></p>
+
+
+
+    <script>
+        var car = new Array(
+            ['Sonata', "blue", 100],
+            ['jeep', "red", 70],
+            ['audi', "white", 150]
+            );
+
+            
+        var cname = document.getElementById("car");
+        cname.textContent="car[2][1] : " + car[2][1]
+
+        for(var i=0; i<3; i++){
+            var cname=document.getElementById("car"+i);
+            cname.textContent=car[i];
+        }
+    </script>
+</body>
+
+</html>

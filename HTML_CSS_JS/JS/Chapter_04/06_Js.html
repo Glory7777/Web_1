@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+</head>
+
+<body>
+    <p id="carname"></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+
+    <script>
+        var car = new Object(); // Car라는 객체 생성
+    
+        car.name = "Sonata"; //객체 안에(힙 메모리 name이라는 변수방 선언 한뒤 'Sonata' 저장 )
+        car.speed = "100";
+        car.color = "red";
+        car.speedup = function () {
+            return this.speed + 10;
+        };
+
+
+        var cname = document.getElementById('carname');
+        cname.textContent = "자동차 이름 : " + car.name;
+
+        var ccolor = document.getElementById('carcolor');
+        ccolor.textContent = "자동차 색상 : " + car.color;
+
+        var cspeed = document.getElementById('carspeed');
+        cspeed.textContent = "자동차 속도 : " + car.speedup();
+
+
+    </script>
+</body>
+
+</html>

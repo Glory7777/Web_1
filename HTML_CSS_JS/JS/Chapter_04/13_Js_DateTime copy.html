@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time</title>
+</head>
+
+<body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+    <p id="d5"></p>
+    <p id="d6"></p>
+    <p id="d7"></p>
+    <p id="d8"></p>
+    <p id="d9"></p>
+    <script>
+        var today = new Date();
+        document.getElementById("d1").innerHTML = today.toDateString();
+        document.getElementById("d2").innerHTML = today.toISOString();
+        document.getElementById("d3").innerHTML = today.toJSON();
+        document.getElementById("d4").innerHTML = today.toLocaleDateString();
+        document.getElementById("d5").innerHTML = today.toLocaleTimeString();
+        document.getElementById("d6").innerHTML = today.toLocaleString();
+        document.getElementById("d7").innerHTML = today.toString();
+        document.getElementById("d8").innerHTML = today.toTimeString();
+        document.getElementById("d9").innerHTML = today.toUTCString();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+
+
+    <script>
+        // 다 컴파일 하고 설치 및 실행
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            var obj = {
+                m1: function () {
+                    return "Hello Sonata";
+                },
+                m2: function (a) {
+                    var result = a;
+                    return result;
+                },
+                m3: function (a, b) {
+                    var result = a + b;
+                    return result;
+                }
+            };
+            document.getElementById("msg1").innerHTML = obj.m1();
+            document.getElementById("msg2").innerHTML = obj.m2(100);
+            document.getElementById("msg3").innerHTML = obj.m3(100, 200);
+        });  
+    </script>
+</head>
+
+<body>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <script>
+    </script>
+</body>
+
+</html>

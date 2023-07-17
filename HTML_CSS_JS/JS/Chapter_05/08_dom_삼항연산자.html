@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var button = document.getElementById("myButton");
+            var image = document.getElementById("myImage");
+            var imageIndex = 1;
+
+            button.addEventListener("click", function(){
+                imageIndex= (imageIndex===1)? 2: 1;
+                image.src='img'+imageIndex + ".jpg"
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <button id="myButton">이미지 변경</button>
+    <p></p>
+    <img id="myImage" src="img1.jpg" alt="이미지" />
+</body>
+
+</html>

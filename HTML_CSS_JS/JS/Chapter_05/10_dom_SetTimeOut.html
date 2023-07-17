@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var button = document.getElementById("myBtn");
+
+            var clickHandler = function(){
+                console.log("버튼이 클릭되었습니다.");
+            };
+
+            button.addEventListener("click", clickHandler);
+
+            //일정 시간이 지난 후 이벤트 제거
+            setTimeout(function(){
+                button.removeEventListener("click", clickHandler);
+                console.log("이벤트 제거되었습니다.");
+            }, 5000);
+        });
+    </script>
+
+</head>
+
+<body>
+    <button id="myBtn">이벤트 제거</button>
+</body>
+
+</html>

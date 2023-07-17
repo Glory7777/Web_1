@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var radios = document.querySelectorAll('input[type="radio"]');
+      var output = document.getElementById("output");
+
+      radios.forEach(function (radio) {
+        radio.addEventListener("change", function () {
+          var selectedColor = document.querySelector('input[name="color"]:checked').value;
+          output.textContent = "선택된 색상 : " + selectedColor;
+        });
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <input type="radio" name="color" value="red" id="redRadio" />
+  <label for="redRadio">빨강</label>
+  <input type="radio" name="color" value="green" id="greenRadio" />
+  <label for="greenRadio">초록</label>
+  <input type="radio" name="color" value="blue" id="blueRadio" />
+  <label for="blueRadio">파랑</label>
+  <div id="output"></div>
+</body>
+
+</html>

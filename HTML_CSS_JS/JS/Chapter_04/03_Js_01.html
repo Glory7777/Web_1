@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+
+</head>
+<body>
+    <p id="CarName"></p>
+    <p id="CarColor"></p>
+    <p id="CarSpeed"></p>
+
+    <script>
+        var car={name: 'Sonta', speed: 50 , color:'white', start:function(){
+            return this.speed + 10;}
+        };
+        var cname=document.getElementById('CarName'); // cname은 CarName의 인스턴스 변수 = 객체가 됨
+        cname.textContent=car.name;
+
+        var ccolor=document.getElementById('CarColor'); // cname은 CarName의 인스턴스 변수 = 객체가 됨
+        ccolor.textContent=car.color;
+
+        var cspeed=document.getElementById('CarSpeed'); // cname은 CarName의 인스턴스 변수 = 객체가 됨
+        cspeed.textContent=car.start();
+
+    </script>
+</body>
+</html>

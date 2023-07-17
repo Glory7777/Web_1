@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dig Clock</title>
+</head>
+
+<body>
+    <div id="digClock"></div>
+    <script>
+        function digClock() {
+            var today = new Date();
+            var day = today.getMonth() + 1 + "월 " + today.getDate() + "일 ";
+            var time =
+                today.getHours() +
+                "시 " +
+                today.getMinutes() +
+                "분 " +
+                today.getSeconds() +
+                "초";
+            document.getElementById("digClock").innerHTML = day + time;
+            setTimeout("digClock()", 1000); //1000 은 1초
+        }
+        digClock();
+    </script>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+</head>
+
+<body>
+    <p>[Car 1]</p>
+    <p id="data10"></p>
+    <p id="data20"></p>
+    <p id="data30"></p>
+
+    <p>[Car 2]</p>
+    <p id="data11"></p>
+    <p id="data21"></p>
+    <p id="data31"></p>
+
+    <p>[Car 3]</p>
+    <p id="data12"></p>
+    <p id="data22"></p>
+    <p id="data32"></p>
+
+
+
+    <script>
+        var car = [
+            { name: "sonata", color: "blue", speed: 100 },
+            { name: "jeep", color: "red", speed: 700 },
+            { name: "audi", color: "white", speed: 150 },
+        ];
+
+        for (var i = 0; i < 3; i++) {
+            var cname = document.getElementById("data1" + i);
+            cname.textContent = "자동차 이름 : " + car[i].name;
+            var ccolor = document.getElementById("data2" + i);
+            ccolor.textContent = "자동차 색상 : " + car[i].color;
+            var cspeed = document.getElementById("data3" + i);
+            cspeed.textContent = "자동차 속도 : " + car[i].speed;
+        }
+
+        var cspeed = document.getElementById('carprice2');
+        cspeed.textContent = "자동차 가격 : " + Kimcar.price; // 추가된 속성  , ( ) 들어가면 안됨 속성값이기에,,,()는 function일 때 사용
+
+    </script>
+</body>
+
+</html>

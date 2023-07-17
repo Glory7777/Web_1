@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+          var select= document.getElementById("mySelect");
+          var output= document.getElementById("output");
+
+          select.addEventListener("change", function(){
+            var selectedOption=select.value;
+            console.log(selectedOption);
+            output.textContent="성별 : "+ selectedOption;
+          });
+        });
+    </script>
+
+</head>
+
+<body>
+    <select id="mySelect">
+        <option value="남">남</option>
+        <option value="여">여</option>
+        <option value="기타">기타</option>
+    </select>
+    <p></p>
+    <div id="output"></div>
+</body>
+
+</html>

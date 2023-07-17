@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/* #1 기본설정 */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+
+.container{
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+article.card{
+    width: 600px;
+    margin: 20px auto;
+    margin-bottom: 60px;
+    background: #fff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+}
+
+/* #2 Header 시작 */
+
+article.card header{
+    height: 40px;
+    padding: 10px;
+}
+
+article.card header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.circle-image{
+    height: 100%; /* height: 40px; padding: 10px; 에 100% ,즉 article.card header */
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.circle-image > img {
+    height: 100%;  /* height: 40px; padding: 5px; 에 100%  */
+    border-radius: 50%;
+}
+
+.card-username {
+    padding: 10px 0;
+    font-weight: 900;
+    line-height: 20px;
+    margin-left: 5px;
+    font-size: 13pt;
+}
+
+.option-more {
+    float: right;
+    padding : 7px;
+}
+
+button.transparent-button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer; /* 마우스 올려두면 손가락 모양으로 변함*/
+}
+
+/* Header 종료 */
+
+/* #3 card-container */
+.card-container{
+    padding: 5px 10px;
+}
+
+/* #4 card-button */
+.card-buttons{
+    padding: 0 5px;
+    margin-top: 5px;
+}
+
+.card-buttons > div{
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+.card-buttons > div.last-card-button {
+    float: right;
+    margin-right: 0;
+}
+
+/* #5 좋아요*/
+.card-likes {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 900;
+  }
+  /* #6 본문 */
+  .card-content {
+    padding: 2px 5px;
+    font-size: 13px;
+  }
+  .card-content li > div {
+    padding: 1px 0;
+  }
+  .card-content li > div > span {
+    font-weight: 900;
+  }
+  
+  .card-content li.comment > div > button {
+    float: right;
+  }
+  
+  .card-content li.comment > div > button > img {
+    width: 12px;
+    margin-right: 5px;
+  }

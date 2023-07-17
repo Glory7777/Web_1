@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time</title>
+</head>
+
+<body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+    <p>
+        -----------------------------------------------------------------------------
+    </p>
+    <p id="d5"></p>
+    <p id="d6"></p>
+    <p id="d7"></p>
+    <p id="d8"></p>
+
+    <script>
+        var today = new Date();
+        document.getElementById("d1").innerHTML = today.getFullYear() + "년"
+        document.getElementById("d2").innerHTML = today.getMonth()+1 + "월" +today.getDate()+"일"; // getMonth 0 에서 시작이기에 +1 해줘야함
+        document.getElementById("d3").innerHTML = today.getHours() + "시" +today.getMinutes()+"분" + today.getSeconds() +"초";
+        document.getElementById("d4").innerHTML = "1970년 1월 1일 이후 현재까지 몇초가 지났나요?" + today.getTime()+"ms가 지났습니다."
+    
+    //기본 생성자
+    document.getElementById("d5").innerHTML= new Date();
+    //1970년 1월 1일 이후 밀리초 계산
+    document.getElementById("d6").innerHTML= new Date(1491803527400);
+    //문자열 날짜
+    document.getElementById("d7").innerHTML= new Date( "November 24, 2021 06:18:07");
+    //날짜 지정(주의 월이 0부터 시작)
+    document.getElementById("d8").innerHTML= new Date( 2023,6,17,13,31,50);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+Icons made by Kirill Kazachek from www.flaticon.com
+- icons/mark.png
+
+Icons made by Freepik from www.flaticon.com
+- icons/heart.png
+- icons/paper-plane.png
+- icons/bookmark.png
+
+Icons made by Smashicons from www.flaticon.com
+- icons/arrow-left.png
+- icons/arrow-right.png
+
+Icons made by Those Icons from www.flaticon.com
+- icons/chat.png
+

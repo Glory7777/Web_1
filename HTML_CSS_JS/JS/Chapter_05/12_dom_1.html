@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+          var checkbox= document.getElementById("myCheckbox");
+          var output= document.getElementById("output");
+
+          checkbox.addEventListener("change", function(){
+            var ischecked=checkbox.checked;
+            console.log(ischecked);
+            output.textContent="동의 : "+ (ischecked? "동의 완료":"동의 미정");
+          });
+        });
+    </script>
+
+</head>
+
+<body>
+  <label> <input type="checkbox" id="myCheckbox" /> 동의합니다 </label>
+  <div id="output"></div>
+</body>
+
+</html>
