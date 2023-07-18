@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InStar Card</title>
     <link rel="stylesheet" href="./style/InstarCard_Style.css">
+    <script type="text/javascript" src="./script/carousel.js"></script>
     <script type="text/javascript" src="./script/smoothscroll.min.js"></script>
 </head>
 
@@ -26,9 +27,27 @@
                 </div>
             </header>
             <main>
-                <div class="carousel" data="0">
+                <div class="carousel" data="0"> <!-- data="0" : index로 사용 되는 속성 -> 첫번째 사진 -->
+                    <!-- 0번 이미지 들어갈 부분 -->
                     <div>
-                        <!-- 0번 이미지 들어갈 부분 -->
+                        <ul>
+                        <li><img src="./img/mountain1.jpg" /></li>
+                        <li><img src="./img/mountain2.jpg" /></li>
+                        <li><img src="./img/mountain3.jpg" /></li>
+                        <li><img src="./img/mountain4.jpg" /></li>
+                        </ul>
+                    <div class="slide slide-left" style="display: none;">
+                        <button class="transparent-button"> 
+                            <img src="./img/icons/arrow-left.png"/>
+                        </button>
+                    </div>
+
+                    <div class="slide slide-right">
+                        <button class="transparent-button"> 
+                            <img src="./img/icons/arrow-right.png"/>
+                        </button>
+                    </div>
+
                         <footer>
                             <div class="active"></div>
                             <div></div>
@@ -97,7 +116,9 @@
             </main>
             <footer class="card-comment">
                 <input type="text" placeholder="댓글달기..." name="comment">
-                <div>게시</div>
+                <div>
+                    <button class="transparent-button"> 게시 </button>
+                </div>
             </footer>
         </article>
     </section>
