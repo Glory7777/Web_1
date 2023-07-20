@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요소 호출</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $("button").on("click", function () { // on  은 두 줄 이상이거나 여러 개 체크, 중복 등의 활동을 할때 사용
+        $(":checked").next().text("현재 학습중인 과목"); // 
+      });
+    });
+
+  </script>
+
+</head>
+
+<body>
+  <h1>Form 요소의 선택</h1>
+  <form>
+    <!-- // html:서버에 전달되는 것 Html:눈에보이는거 -->
+    <input type="checkbox" name="lecture" value="html"><span>Html</span> 
+    <br>
+    <input type="checkbox" name="lecture" value="css"><span>Css</span> 
+    <br>
+    <input type="checkbox" name="lecture" value="Javascript"><span>Javascript</span> 
+    <br>
+    <input type="checkbox" name="lecture" value="Jquery" checked><span>Jquery</span> 
+    <br>
+  </form>
+  <button>현재 학습 과목</button>
+  
+</body>
+
+</html>

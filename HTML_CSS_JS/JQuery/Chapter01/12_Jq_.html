@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#getter").on("click", function(){
+        var size= "넓이는 : "+
+         $("#box").width() + "px이고 높이는 : " +
+         $("#box").height()+"px입니다.<br>";
+        $("#text").html(size);
+      });
+  
+      $("#setter").on("click", function(){
+        w=$("#box").width();
+        h=$("#box").height();
+        //box 사이즈 반으로 줄임
+        $("#box").width(w/2).height(h/2);
+      });
+       
+  });
+  </script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>.width() 메소드와 .height() 메소드</h1>
+  <p>
+    아래의 버튼을 누르면 다음 div 요소의 크기를 읽어오거나 설정할 수 있어요!!
+  </p>
+  <button id="getter">크기 읽어오기!</button>
+  <button id="setter">크기 줄이기!</button><br /><br />
+  <div id="box" style="width: 400px; height: 200px; background-color: yellow"></div>
+  <p id="text"></p>
+</body>
+
+</html>
+
+
+
+
+<!-- 
+  $(function () {
+    $("#getter").on("click", function () {
+      var size = "width: " +
+        $("#box").width() + "px <br/>height: " +
+        $("#box").height() + "px <br/>";
+      $("#text").html(size);
+    });
+
+    $("#setter").on("click", function () {
+      w = $("#box").width();
+      h = $("#box").height();
+      $("#box").width(w / 2).height(h / 2);
+      // $("#text").html(size);
+    });
+  }) -->

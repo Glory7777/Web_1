@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function(){
+      $("button").on("click", function(){
+        var imgsrc = $("img").attr("src"); // 속성 가져오기
+        $("img").attr("src", "../img/sul1.png"); // 속성 값 교체
+      });
+      
+    });
+  </script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>.attr()메소드</h1>
+<p>사랑스런 백설이의 이미지가 변경됩니다</p>
+<button>생파사진</button>
+<p></p>
+<img
+src="../img/sul2.jpg"
+style="width: 320px; height: 214px; border: 1px solid black"
+/>
+</body>
+
+</html>

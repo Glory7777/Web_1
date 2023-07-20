@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.clone() method</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("<b>여름상품세일 </b>").prependTo(".item");
+      });
+    });
+
+  </script>
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <h1>.prepend() 메소드</h1>
+  <ul>
+    <li class="item">상의</li>
+    <li class="item">하의</li>
+    <li>아우터</li>
+
+  </ul>
+
+  <button>세일 상품</button>
+</body>
+
+</html>

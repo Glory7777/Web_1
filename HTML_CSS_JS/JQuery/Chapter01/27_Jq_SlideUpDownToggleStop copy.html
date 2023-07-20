@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> .detach() method</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#slide").click(function () {
+        $("#panel").css("color", "red").slideDown(3000).fadeTo("slow", 0.3).slideUp(5000);
+      });
+
+
+    });
+
+  </script>
+
+  <style>
+    #slide,
+    #panel {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: 1px solid #c3c3c3;
+    }
+    #panel {
+      padding: 70px;
+      display: none;
+      background-color: #ffff00;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="slide">[오늘이 공지]</div>
+  <div id="panel">1월 21일(금요일) 공지<br>불금하세요<br>1월 24일:정보처리 3과목 특강<br>24일 태한님이 치킨을 쏩니다</div>
+
+</body>
+
+</html>

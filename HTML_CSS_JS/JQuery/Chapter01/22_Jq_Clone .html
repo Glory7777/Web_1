@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.clone() method</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function() {
+        $("#firstitem").clone().appendTo("#list");
+        $("#seconitem").clone().appendTo("#list");
+      });
+    });
+
+  </script>
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <h1>.clone() 메소드</h1>
+<ul id="list">
+<li id="firstitem">상의</li>
+<li id="seconitem">하의</li>
+<li>아우터</li>
+
+</ul>
+<button>상품추가</button>
+</body>
+
+</html>

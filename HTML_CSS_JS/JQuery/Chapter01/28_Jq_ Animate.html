@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> .detach() method</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    function move(obj, time){
+      $(obj).stop().animate({left:-350, top:0},time)
+    };
+
+    function back(css){
+      $(css).stop().animate({left:0, top:0}) //x, y 각각(0,0)
+    };
+  </script>
+
+  <style>
+    .moving{
+      border: 1px solid #000000;
+      margin: 20px auto 0 auto;
+      text-align: right;
+      width: 550px;
+      }
+      
+      .moving img{
+      cursor: pointer;
+      position: relative;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="init">
+    <button type="button" onclick="back('.moving img')">초기화</button>
+    </div>
+    
+    <div class="moving">
+    <img src="../img/pic1.jpg" onclick="move(this,6000)"/><br>
+    <img src="../img/pic2.jpg" onclick="move(this,3000)"/><br>
+    <img src="../img/pic1.jpg" onclick="move(this,1000)"/>
+    </div>
+</body>
+
+</html>

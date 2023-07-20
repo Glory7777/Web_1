@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> .detach() method</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var data;
+      $("#detachBtn").click(function () {
+        data=$(".content").detach();
+      });
+
+      $("#restorBtn").click(function () {
+        $("#container").append(data);
+      });
+    });
+
+  </script>
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <h1>.detach() 메소드</h1>
+<div id="container">
+<div >첫번째 컨텐츠</div>
+<div class="content second">두번째 컨텐츠</div>
+<div class="content third">세번째 컨텐츠</div>
+</div>
+<button id="detachBtn">상품 취소</button>
+<button id="restorBtn">상품 복구</button>
+
+</body>
+
+</html>

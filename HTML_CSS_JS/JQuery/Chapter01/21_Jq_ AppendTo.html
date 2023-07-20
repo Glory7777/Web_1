@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.AppendTo() method</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // 맨 마지막에 id가 firstitem인 요소 추가
+      $("#firstBtn").click(function(){
+        $("#firstitem").appendTo("#list");
+      });
+      // 맨 마지막에 id가 seconitem 요소 추가
+      $("#seconBtn").click(function(){
+        $("#seconitem").appendTo("#list");
+      });
+      // 맨 마지막에 id가 thirditem 요소 추가
+      $("#thirdBtn").click(function(){
+        $("#thirditem").appendTo("#list");
+      });
+
+    });
+
+  </script>
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <h1>.appendTo() 메소드</h1>
+  <ul id="list">
+    <li id="firstitem">상의</li>
+    <li id="seconitem">하의</li>
+    <li id="thirditem">아우터</li>
+  </ul>
+
+  <button id="firstBtn">상의 상품(append)</button>
+  <button id="seconBtn">하의 상품(append)</button>
+  <button id="thirdBtn">아우터 상품(append)</button>
+</body>
+
+</html>

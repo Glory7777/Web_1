@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요소 호출</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $("div.out").on("click", function () {
+        $("div.out").css("background-color", "red");
+      });
+    });
+
+    var n=0;
+    // "div.out" 요소에 진입하면 코드는 해당 "div" 내부의
+    // 첫 번째 "p" 요소의 텍스트를 "마우스 포인트 들어옴"으로 설정하고 변수 "n"의 값을 증가시킴
+    $(document).ready(function () {
+      $("div.out").mouseenter(function(){
+        $("p:first, this").text("마우스 포인트 들어옴");
+        $("p:last, this").text(++n);
+      });
+
+      $("div.out").mouseleave(function(){
+        $("p:first, this").text("마우스 포인트 나감");
+        $("p:last, this").text("최종 횟수 : "+n);
+      });
+
+      $("div.out").mousedown(function(){
+        $("p:first").hide();
+        $("p:last").text("메세지 없음 ");
+      });
+
+      $("div.out").mouseup(function(){
+        $("p:first").show();
+        $("p:last").text("최종 횟수 : "+n);
+      });
+    });
+  </script>
+  <style>
+    div.out {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000000;
+      text-align: center;
+      background-color: yellow;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="out">
+    <p>마우스 이벤트 구현</p>
+    <p>0</p>
+  </div>
+</body>
+
+</html>

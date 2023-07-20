@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#hide").click(function () {
+        $("img").hide("slow");
+      });
+
+      $("#show").click(function () {
+        $("img").show("fast");
+      });
+
+
+      $("#toggle").click(function () {
+        $("img").toggle(3000);
+      });
+    });
+
+  </script>
+  <style>
+    .css_pic {
+      height: 430px;
+      text-align: center;
+    }
+
+    .css_pic img {
+      width: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="hide">hide</button>
+  <button id="show">show</button>
+  <button id="toggle">toggle</button><br><br>
+  <p></p>
+  <img src="../img/sul1.png" name="pic2" />
+</body>
+
+</html>

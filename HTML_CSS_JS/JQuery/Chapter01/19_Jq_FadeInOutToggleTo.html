@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#out").click(function () {
+        $("img").fadeOut("3000");  // 서서히 사라지게  또는 FadeOut (3000)
+      });
+
+      $("#in").click(function () {
+        $("img").fadeIn("slow"); // 서서히 보이게
+      });
+
+
+      $("#toggle").click(function () {
+        $("img").fadeToggle("slow"); // 서서히 보이거나 사라지게
+      });
+
+      $("#to50").click(function () {
+        $("img").fadeTo("slow", 0.5); 
+      });
+
+      $("#to10").click(function () {
+        $("img").fadeTo("slow", 0.1); 
+      });
+
+      $("#to100").click(function () {
+        $("img").fadeTo("slow", 1.0); 
+      });
+
+    });
+
+  </script>
+  <style>
+    .css_pic {
+      height: 430px;
+      text-align: center;
+    }
+
+    .css_pic img {
+      width: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="out">fadeOut</button>
+<button id="in">fadeIn</button>
+<button id="toggle">toggle</button><br><br>
+<button id="to50">opacity 50%</button><br><br>
+<button id="to10">opacity 10%</button><br><br>
+<button id="to100">opacity 100%</button><br><br>
+<p></p>
+<img src="../img/sul1.png" name="pic2" />
+</body>
+
+</html>

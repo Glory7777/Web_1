@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요소 호출</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function(){
+      $("p").on("click", function() {
+        $("p").css("color", "red");
+        $("p").css("font-size", "18px");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <p>
+  메세지 : 제이쿼리 입문<br>
+  마우스 이벤트로 스타일 변경(클릭해주세요)
+  </p>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> .detach() method</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#panel").click(function () {
+        $("#panel").slideUp("fast");
+      });
+
+      $("#slide").click(function () {
+        $("#panel").slideDown(5000);
+      });
+
+      $("#flip").click(function () {
+        $("#panel").slideToggle("slow");
+      });
+
+      $("#stop").click(function () {
+        $("#panel").stop();
+      });
+
+    });
+
+  </script>
+
+  <style>
+    #slide,
+    #panel,
+    #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: 1px solid #c3c3c3;
+    }
+    #panel {
+      padding: 70px;
+      display: none;
+      background-color: #ffff00;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="slide">[오늘이 공지]</div>
+  <div id="panel">1월 21일(금요일) 공지<br>불금하세요<br>1월 24일:정보처리 3과목 특강<br>24일 태한님이 치킨을 쏩니다</div>
+  <div id="flip">Toggle Slide</div>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <button id="stop">Stop Sliding</button>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요소 호출</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $("button").on("click", function () {
+        $("li:has(span)").css("color", "red").text("오늘의 점심메뉴로 선정!"); // has : 안에 있어?
+      });
+    });
+
+  </script>
+
+</head>
+
+<body>
+  <h1>선택한 요소의 필터링</h1>
+  <ul>
+  <li>라면</li>
+  <li><span>오징어 불고기</span></li>
+  <li>삼겹살</li>
+  </ul>
+  <button>필터링</button>
+</body>
+
+</html>

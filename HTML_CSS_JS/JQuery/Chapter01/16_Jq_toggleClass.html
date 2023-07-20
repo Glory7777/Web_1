@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function(){
+        $("h1, h2, p, div").toggleClass("red");
+      });
+    });
+  </script>
+  <style>
+    .red {
+      color: red;
+      border: 1px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>HTML</h1>
+  <h2>CSS</h2>
+  <p>Javasctipt</p>
+  <div>Jquery</div>
+  <p></p>
+  <button>CSS적용/해제</button>
+</body>
+
+</html>

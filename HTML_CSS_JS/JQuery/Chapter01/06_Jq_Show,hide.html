@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요소 호출</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    
+    $(document).ready(function(){    
+      $("button.hide").click(function(){
+        $("p").hide();
+      });
+      
+      $("button.show").click(function(){
+        $("p").show();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  
+  <p>문서 준비 이벤트는 여러 다중 이벤트도 실행 가능하다</p>
+  <p>버튼 클릭 이벤트</p>
+  <button class="hide">메세지 삭제</button>
+  <button class="show">메세지 출력</button>
+</body>
+
+</html>

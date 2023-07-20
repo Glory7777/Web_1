@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+     $("button").click(function (){
+      $("#list").append("<li> 신발 </li>");
+      $("#list").append("<li> 악세사리 </li>");
+      $("#list").append("<li> MD 추천 </li>");
+     });
+
+    });
+
+  </script>
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <h1>.append() 메소드</h1>
+<ul id="list">
+<li>상의</li>
+<li>하의</li>
+<li>아우터</li>
+
+</ul>
+<button>상품추가</button>
+</body>
+
+</html>

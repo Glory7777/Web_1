@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요소 호출</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    // body > document > window
+
+    // 전체 페이지와 이미지, 파일로드까지 모든 컨텐츠가 로드된 후 실행
+    $(window).on("load", function(){
+      $("#win").text("환영합니다")  // inner text = text
+    })
+    // 로드되야하는 태그를 읽어온 후 실행
+    $(document).ready(function(){    // document.ready 는 특정 호출하는 문서에 대한 작업
+      $("#doc1").text("id= doc1 문서 로드 후 실행")
+    })
+
+    $(document).ready(function(){    
+      $("#doc2").text("id= doc2 문서 로드 후 실행")
+    })
+  </script>
+</head>
+
+<body>
+  <h1>문서와 창이 모두 로드 되는 시점</h1>
+  <p>두 시점의 차이 확인하기</p>
+  <iframe src="01_jq.html" width="100%" height="230px">
+
+  </iframe>
+  <p id="doc1"> 잠시만 기다려 주세요1</p>
+  <p id="doc2"> 잠시만 기다려 주세요2</p>
+  <p id="win"> 잠시만 기다려 주세요win</p>
+</body>
+
+</html>

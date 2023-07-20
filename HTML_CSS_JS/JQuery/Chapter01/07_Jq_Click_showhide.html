@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요소 호출</title>
+  <script src="../script/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("ans.q1").hide();
+      $("p.q1").click(function () {
+        $("ans.q1").show();
+      });
+      $("ans.q1").click(function(){
+        $(this).hide();
+        });
+      
+
+
+      $("ans.q2").hide();
+      $("p.q2").click(function () {
+        $("ans.q2").show();
+      });
+      $("ans.q2").click(function(){
+        $(this).hide();
+        });
+    });
+  </script>
+
+<!-- 
+<script>
+  $(document).ready(function () {
+  $("ans").hide();
+  
+  $("p.q1").click(function () {
+  $("ans.q1").css("color", "red").show();
+  $("ans.q2").hide();
+  })
+  $("p.q2").click(function () {
+  $("ans.q2").css("color", "blue").show();
+  $("ans.q1").hide();
+  })
+  })
+  </script> -->
+
+
+  
+  <style>
+    ans.q1{
+      color: red;
+      font-size: 18px;
+    }
+
+    ans.q2{
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>질문1 : 대한민국의 수도는 어디입니까?</h2>
+  <p class="q1">[정답 보기]</p>
+  
+  <ans class="q1">대한민국의 수도는 <strong>서울</strong>입니다.</ans>
+  <br>
+  <h2>질문2 : 대한민국의 국보1호는 무엇입니까?</h2>
+  <p class="q2">[정답 보기]</p>
+  
+  <ans class="q2">대한민국의 국보1호는 <strong>숭례문</strong>입니다.</ans>
+
+</body>
+
+</html>
