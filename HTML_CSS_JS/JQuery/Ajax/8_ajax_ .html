@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
+            var city = "Seoul";
+            var apiUrl= "http://api.openweathermap.org/data/2.5/weather?q=" +
+            city +
+            "&appid=" +
+            apiKey;
+
+            $.ajax({
+                url:apiUrl,
+                type:"GET",
+                success:function(result){
+                    var tempInCelsuis = Math.round(result.main.temp - 273.15);
+                    $("#result").html(
+                        "<h3>" +
+                            city +
+                            "의 현재 온도는 " +
+                            tempInCelsius +
+                            "℃입니다.</h3>"
+                    );
+                },
+                error: function (error) {
+                    console.log(`Error: ${error}`);
+                },
+            }); // Ajax
+        }); //Ready document
+    </script>
+
+    <title>Ajax(api)</title>
+</head>
+
+<body>
+    <h2>날씨 API 데이터 가져오기 </h2>
+    <div id="result"></div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            //form action(url), Type(method)
+            $.ajax({
+                url:"list.html",
+                type:"GET",
+                dataType:"html",
+                success:function(data){
+                    console.log(data);
+                    $("table").html(data); // 테이블에 데이터 담기
+                },
+                error: function(){
+                    console.log(`Error ${error}`);
+                }
+            });
+        });
+    </script>
+    <title>Ajax</title>
+</head>
+
+<body>
+    <form id="frm" >
+        <h1>실습과제</h1>
+    </form>
+    <table width="100%" border="1"> </table>
+</body>
+
+</html>
+
+<!-- 
+Ajax 는 비동기식 통신 : 데이터를 웹상에서 던지고 받기
+
+웹페이지 원리
+동기식은
+웹페이지 자체가 통신, 데이터를 가져올때 일부분을 가져오진 못함 / 인스타에서 댓글만 추가한다해도 화면단 전체가 새로고침
+페이지 전체를 가져온 값에 일부분을 추가
+
+비동기식은 동기화시켜서 전체를 가져오는게 아니라 Ajax를 활용해 댓글란 만 가져와서 변경하는것 
+F5 새로고침 할때 댓글 추가부분만 수정하고 윗단은 변경사항 없음
+즉 전체 페이지를 가져오는 것이 아닌, 내가 필요한 일부분만 가져오는 것
+훨씬 빠르고 메모리를 효율적으로 활용가능 함. 
+-->

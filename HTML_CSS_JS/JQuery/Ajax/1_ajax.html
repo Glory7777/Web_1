@@ -10,9 +10,9 @@
         $(document).ready(function () {
             $("#loadButton").click(function() {
                 $.ajax({
-                    url: "list.html",
-                    type:"GET",
-                    success:function(result){
+                    url: "list.html",  // form 의 action
+                    type:"GET", // form 의 get
+                    success:function(result){ // form 의 내용
                         $("#result").html(result);
                     },
                     error: function(){
@@ -30,6 +30,12 @@
     <button id="loadButton">데이터 불러오기</button>
     <p></p>
     <div id="result"></div>
+
+    <!-- 
+        <form action=" " method="get"></form>
+
+    <input type="submit" value="확인"> 
+-->
 </body>
 
 </html>

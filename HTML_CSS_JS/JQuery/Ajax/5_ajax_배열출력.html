@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#loadButton").click(function () {
+                $.ajax({
+                    url: "dummy.json",
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        // alert(JSON.stringify(data));  // 값을 가져와서 일반 string 데이터로 변환하여 보여줌
+                        console.log(data);
+
+                        var title = "안녕하세요";
+                        console.log(title);
+                        console.log(data.title);
+                        console.log(data.subject);
+                        console.log(data.list);
+                        // 부분 출력
+                        //html의 titleLayer라는 공간에 data.title을 가져옴
+                        $("#titleLayer").html("<h2>" + data.title + "</h2>");
+                        $(".subjectLayer").html("<h2>" + data.subject + "</h2>");
+                        //배열출력
+                        var list = data.list;
+                        var tableTag = "";
+                        //for문 사용
+                        /*  #1 방법. For 문사용
+                        for(var i=0; i<list.length; i++){
+                            tableTag+=
+                            "<tr><td>"+
+                            list[i].subject+
+                            "</td><td>"+
+                            list[i].content+
+                            "</td></tr>";  
+                            */
+
+                        // #2 방법. Append 활용하여 출력
+                        /* $("table").append("<tr><td>"+ list[i].subject+"</td><td>"+list[i].content+"</td></tr>"   );
+
+                    }                    
+                    */
+                        // $("table").html(tableTag);
+
+                        // #3 방법. each문 활용하여 출력
+                        $.each(list, function (index, row) {
+                            tableTag +=
+                                "<tr><td>" +
+                                row.subject +
+                                "</td><td>" +
+                                row.content +
+                                "</td></tr>";
+                        });
+                        $("table").html(tableTag);
+                    },
+                });
+            });
+        });
+
+
+
+    </script>
+
+    <title>Ajax</title>
+</head>
+
+<body>
+    <input type="button" value="로드" id="loadButton">
+    <p></p>
+    <hr>
+    <p></p>
+    <div id="titleLayer"></div>
+    <p></p>
+    <div class="subjectLayer"></div>
+    <p></p>
+    <table width="50%" border="1"></table>
+</body>
+
+</html>
+
+<!-- CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말이다.
+사용자 인터페이스가 갖추어야 할 기능(정보의 참조/검색/갱신)을 가리키는 용어 -->

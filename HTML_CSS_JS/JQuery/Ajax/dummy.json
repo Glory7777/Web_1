@@ -1,0 +1,18 @@
+{
+    "title": "Django 웹프로그래밍",
+    "subject": "프레임워크 로직",
+    "list": [
+        {
+            "subject": "로그인",
+            "content": "admin"
+        },
+        {
+            "subject": "회원가입",
+            "content": "MTV"
+        },
+        {
+            "subject": "게시판",
+            "content": "CRUD"
+        }
+    ]
+}

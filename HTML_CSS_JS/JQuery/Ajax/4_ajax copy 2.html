@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#addMenuButton").click(function () {
+                var menuName = $("#menuName").val(); // 받고
+                $("#menuList").append(`<li>${menuName}</li>`); // 주고
+                $("#menuName").val(""); // 입력필드 초기화
+            });
+        });
+
+    </script>
+
+    <title>Ajax</title>
+</head>
+
+<body>
+    <h2>메뉴 등록</h2>
+    <input type="text" id="menuName" placeholder="메뉴 이름">
+    <p></p>
+    <button id="addMenuButton"> 메뉴 추가</button>
+    <hr>
+    <h3>메뉴 등록</h3>
+    <ul id="menuList"></ul>
+</body>
+
+</html>
