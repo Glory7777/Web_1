@@ -1,8 +1,11 @@
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import {Nav} from 'react-bootstrap'
 
+import {Context1} from '../App'
+import { useDispatch } from 'react-redux';
+import { addItem } from '../store';
 
 
 
@@ -22,11 +25,9 @@ import {Nav} from 'react-bootstrap'
 //  }
 
 
-
-
-
-
 function Detail(props) {
+
+    let {재고} = useContext(Context1)  // state 사용은 2. useContext(Context)
 
     let {id} = useParams();
     console.log(id)
@@ -45,7 +46,19 @@ function Detail(props) {
     let [count, setCount] = useState(0)
     let [alert, setAlert] = useState(true)
     let [ tab, setTab] = useState(0)
+    let dispatch = useDispatch()
 
+
+    useEffect(() => {
+        let 꺼낸거 = localStorage.getItem('watched')
+        꺼낸거 = JSON.parse(꺼낸거)
+        꺼낸거.push(찾은상품.id)
+
+        //Set으로 바꿨다가 다시 array로 만들기
+        꺼낸거 = new Set(꺼낸거)
+        꺼낸거 = Array.from(꺼낸거)
+        localStorage.setItem('watched', JSON.stringify(꺼낸거))
+    }, [])
 
 
     // 숫자로 적지 않을 시 오류메세지 출력
@@ -97,7 +110,6 @@ function Detail(props) {
             {count}
          <button onClick={()=>{ setCount(count+1) }}>버튼</button>
 
-         
         <div className="row">
             <div className="col-md-6">
                 <img src={"https://codingapple1.github.io/shop/shoes1.jpg"} width="100%" />
@@ -106,7 +118,9 @@ function Detail(props) {
                 <h4 className="pt-5"> {찾은상품.title} </h4>
                 <p>  {찾은상품.content}</p>
                 <p>  {찾은상품.price}원</p>
-                <button className="btn btn-danger">주문하기</button>
+                <button className="btn btn-danger" onClick={()=> {
+                    dispatch(addItem( {id : 1, name : 'Red Knit', count : 1}))
+                }}>주문하기</button>
             </div>
             </div>
 
@@ -138,9 +152,16 @@ function Detail(props) {
 function TabContent({tab}){
 
     let [fade, setFade] = useState('')
+    let {재고} = useContext(Context1) 
 
+        
     useEffect(()=>{
-        setFade('end')
+        let a = setTimeout(()=> {setFade('end')}, 100)
+        
+        return () =>{
+            clearTimeout(a)
+            setFade('')
+        }
       }, [tab])
 
       return (
