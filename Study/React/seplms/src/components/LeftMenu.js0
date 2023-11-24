@@ -1,0 +1,102 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+//import SlideUpDown from 'react-slide-up-down';
+import SlideUpDown from 'react-slidedown';
+
+const LeftMenu = () => {
+  const [loginInfo, setLoginInfo] = useState({
+    menulist: [],
+    loginId: '',
+  });
+
+  useEffect(() => {
+    const loginInfoData = JSON.parse(localStorage.getItem('loginInfo')) || {};
+    loginInfoData.usrMnuAtrt.forEach((item) => {
+      item.isShow = false;
+    });
+    setLoginInfo({
+      menulist: loginInfoData.usrMnuAtrt,
+      loginId: loginInfoData.loginId,
+    });
+  }, []);
+
+  const logoutproc = () => {
+    // Replace this with your actual logout logic
+    alert('Logout clicked');
+  };
+
+  const slideDown = (index) => {
+    setLoginInfo((prevLoginInfo) => ({
+      ...prevLoginInfo,
+      menulist: prevLoginInfo.menulist.map((item, i) => ({
+        ...item,
+        isShow: i === index ? !item.isShow : false,
+      })),
+    }));
+  };
+
+  return (
+    <div id="lnb_area">
+      <div className="logo">
+        <div id="header">
+          <Link to="/dashboard/home" className="logo">
+            <img id="logoImg" src="../assets/images/admin/login/logo_img.png" alt="logo" />
+          </Link>
+        </div>
+      </div>
+      <div className="login">
+        {loginInfo.loginId && (
+          <>
+            <img
+              src="../assets/images/admin/comm/left_myImg.jpg"
+              className="LoginImg"
+              alt="사진"
+            />
+            <span className="LoginName">{loginInfo.loginId}</span>
+            <div className="btn_loginArea">
+              <a className="logout" onClick={logoutproc} name="modal" href="#!">
+                <span>LOGOUT</span>
+              </a>
+            </div>
+          </>
+        )}
+      </div>
+      <ul className="lnbMenu">
+        {loginInfo.menulist.map((list, index) => (
+          <li key={list.mnu_id}>
+            <dl>
+              {/* 대분류 메뉴 */}
+              <dt>
+                <a
+                  className={`lnbBtn menu005 ${list.isShow ? 'on' : ''}`}
+                  href="#!"
+                  onClick={() => slideDown(index)}
+                >
+                  {list.mnu_nm}
+                </a>
+              </dt>
+
+              {/* 소분류 메뉴 */}
+              <SlideUpDown show={list.isShow} duration={400}>
+                <dd>
+                  {list.nodeList.map((i) => (
+                    <Link
+                      key={i.mnu_id}
+                      to={`/dashboard${i.mnu_url.replace('.do', '')}`}
+                    >
+                      - {i.mnu_nm}
+                    </Link>
+                  ))}
+                </dd>
+              </SlideUpDown>
+            </dl>
+          </li>
+        ))}
+      </ul>
+
+      <div style={{ clear: 'both' }}></div>
+    </div>
+  );
+};
+
+export default LeftMenu;
