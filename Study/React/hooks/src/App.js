@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useState} from "react" 
+import React, {useState, useRef } from "react" 
 import { ReactDOM } from 'react';
 import useInput from './component/useInput';
 import useTabs from './component/useTabs';
+import UseEffect  from './component/useEffect';
+import UseTitle from './component/useTitle';
+import UseClick from './component/useClick';
+import useConfirm from './component/useConfirm';
+import usePreventLeave from './component/usePreventLeave';
+import useBeforeLeave from './component/useBeforeLeave';
 
 // const useInput = initialValue => {
 //   const [value, setValue] = useState(initialValue);
@@ -35,6 +41,25 @@ function App() {
 ]
  //useTabs
 
+  const titleUpdater = UseTitle("Loading...");
+  setTimeout(() => titleUpdater("Home"), 5000);
+// useTitle
+
+const sayHello =  () => console.log("say hello");
+const title = UseClick(sayHello);
+//UseClick
+
+const deleteWorld = () => console.log( "Deleting the world...")
+const abort = () => console.log("Aborted");
+const confirmDelete = useConfirm("are you sure", deleteWorld, abort);
+//useConfirm
+
+const { enablePrevent, disablePrevent} = usePreventLeave()
+//usePreventLeave
+
+const begForLife = () => console.log("Pls don't leave");
+useBeforeLeave(begForLife);
+//useBeforeLeave
   const{ currentItem, changeItem} = useTabs(0, content);
   return (
     <div className="App">
@@ -52,6 +77,19 @@ function App() {
         <button onClick={() => changeItem(index)}>{section.tab}</button>
       ))}
       <div> {currentItem.content}</div>
+      <br></br>
+      <br></br>
+      <h2 className="App"><UseEffect/></h2>
+      <br></br>
+      <br></br>
+      <h1 ref={title}>Hi! Click me</h1>
+      <br></br>
+      <br></br>
+      <div> <button onClick={confirmDelete}> Delete the world</button></div>
+      <br></br>
+      <br></br>
+      <div> <button onClick={enablePrevent}> Protect</button></div>
+      <div> <button onClick={disablePrevent}> Unprotect</button></div>
 
     </div>  
   );
