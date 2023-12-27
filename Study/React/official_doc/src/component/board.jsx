@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Square from "./square";
+import Square from "./component/square";
 
 
 export default function Board() {
